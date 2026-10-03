@@ -1,3 +1,4 @@
+export const metadata = { title: "SEOtriks Pricing | SEO Software Plans from $0", description: "Compare SEOtriks Free, Starter, Growth and Pro plans for SEO audits, monitoring, recommendations, content optimization and website analysis." };
 import { FaqItem } from "../FaqItem";
 
 export default function Page() {
@@ -49,8 +50,8 @@ export default function Page() {
 <section className="w-full max-w-[1280px] mx-auto px-margin py-space-md">
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative">
-<div className="flex flex-col">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Free</span>
 <span className="bg-surface-container font-label-sm text-label-sm text-secondary px-2.5 py-1 rounded-full">Explorer</span>
@@ -114,8 +115,8 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative">
-<div className="flex flex-col">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Starter</span>
 <span className="bg-light-cyan font-label-sm text-label-sm text-dusk-blue px-2.5 py-1 rounded-full font-medium">Solopreneur</span>
@@ -256,8 +257,8 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative">
-<div className="flex flex-col">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Pro</span>
 <span className="bg-primary/10 font-label-sm text-label-sm text-primary px-2.5 py-1 rounded-full font-semibold">Agencies</span>
@@ -341,7 +342,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-md">
 <span className="material-symbols-outlined text-[28px]">search</span>
@@ -358,7 +359,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-light-cyan flex items-center justify-center text-dusk-blue mb-space-md">
 <span className="material-symbols-outlined text-[28px]">storefront</span>
@@ -375,7 +376,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-burnt-peach/10 flex items-center justify-center text-burnt-peach mb-space-md">
 <span className="material-symbols-outlined text-[28px]">trending_up</span>
@@ -392,7 +393,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md">
 <span className="material-symbols-outlined text-[28px]">hub</span>

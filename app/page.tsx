@@ -1,3 +1,4 @@
+export const metadata = { title: "SEOtriks: SEO Audit Tool & AI SEO Software", description: "Audit your website, find important SEO issues and opportunities, get actionable recommendations, monitor changes and track search performance with SEOtriks." };
 
 export default function Page() {
   return (

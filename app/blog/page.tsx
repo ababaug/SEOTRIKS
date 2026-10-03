@@ -1,3 +1,4 @@
+export const metadata = { title: "SEO Blog, Guides & Search Optimization Tips | SEOtriks", description: "Read practical SEO guides covering technical SEO, content optimization, search strategy, local SEO, AI search and website performance." };
 
 export default function Page() {
   return (

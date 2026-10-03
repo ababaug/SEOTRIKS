@@ -1,3 +1,4 @@
+export const metadata = { title: "Contact SEOtriks | Sales, Support & Partnerships", description: "Contact SEOtriks for product questions, sales, support, partnerships, billing and other enquiries." };
 
 export default function Page() {
   return (
