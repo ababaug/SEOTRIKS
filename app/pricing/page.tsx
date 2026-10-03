@@ -1,3 +1,4 @@
+import { FaqItem } from "../FaqItem";
 
 export default function Page() {
   return (
@@ -589,75 +590,19 @@ export default function Page() {
 </div>
 <div className="space-y-space-sm" id="faq-accordion-group">
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>Do I need a credit card to get started with the Free tier?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            No. The Free tier requires zero payment details. You simply sign up with your email or Google account, verify your site via Search Console or manual DNS, and receive immediate baseline diagnostics.
-          </div>
-</div>
+<FaqItem question="Do I need a credit card to get started with the Free tier?">No. The Free tier requires zero payment details. You simply sign up with your email or Google account, verify your site via Search Console or manual DNS, and receive immediate baseline diagnostics.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>Can I switch plans or upgrade anytime as my site grows?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            Yes, upgrades take effect immediately. Any unused days on your previous subscription are credited automatically on a pro-rata basis toward your higher tier. Downgrades apply at the end of the active billing period.
-          </div>
-</div>
+<FaqItem question="Can I switch plans or upgrade anytime as my site grows?">Yes, upgrades take effect immediately. Any unused days on your previous subscription are credited automatically on a pro-rata basis toward your higher tier. Downgrades apply at the end of the active billing period.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>What are the cancellation terms? Is there a lock-in?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            No long-term contracts. You can cancel your monthly or annual subscription directly from your settings tab with one click. You will retain full access until the end of your prepaid period and can export all audit records in CSV or PDF.
-          </div>
-</div>
+<FaqItem question="What are the cancellation terms? Is there a lock-in?">No long-term contracts. You can cancel your monthly or annual subscription directly from your settings tab with one click. You will retain full access until the end of your prepaid period and can export all audit records in CSV or PDF.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>What happens if my site reaches its monthly page crawl limit?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            We never surprise you with unexpected overage invoices. If your audit reaches its quota (for instance 1,000 pages on Starter), SEOtriks audits the highest-impact pages by traffic and warns you. You can either wait for your quota reset or make a one-click tier expansion.
-          </div>
-</div>
+<FaqItem question="What happens if my site reaches its monthly page crawl limit?">We never surprise you with unexpected overage invoices. If your audit reaches its quota (for instance 1,000 pages on Starter), SEOtriks audits the highest-impact pages by traffic and warns you. You can either wait for your quota reset or make a one-click tier expansion.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>Can I connect multiple Google Search Console properties?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            Yes. Each website slot in Starter (1 site), Growth (5 sites), or Pro (15 sites) can connect its own dedicated Google Search Console property and Google Analytics 4 stream, keeping data strictly isolated per project.
-          </div>
-</div>
+<FaqItem question="Can I connect multiple Google Search Console properties?">Yes. Each website slot in Starter (1 site), Growth (5 sites), or Pro (15 sites) can connect its own dedicated Google Search Console property and Google Analytics 4 stream, keeping data strictly isolated per project.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>Do you offer a #1 ranking guarantee?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            We maintain an honest, zero-hype policy: no tool or consultant can guarantee specific Google rankings. SEOtriks provides precise engineering audits, high-confidence AI optimizations, and silent regression alerts that give you the highest statistical edge in competitive SERPs.
-          </div>
-</div>
+<FaqItem question="Do you offer a #1 ranking guarantee?">We maintain an honest, zero-hype policy: no tool or consultant can guarantee specific Google rankings. SEOtriks provides precise engineering audits, high-confidence AI optimizations, and silent regression alerts that give you the highest statistical edge in competitive SERPs.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
-<button className="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-jet-black focus:outline-none py-1" >
-<span>Is the SEOtriks WordPress plugin strictly required?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden pt-space-sm font-body-md text-body-md text-on-surface-variant">
-            No. The WordPress companion plugin is entirely optional. It simply enables 1-click publishing of approved AI recommendations and direct schema synchronization. SEOtriks audits any website regardless of CMS, including Webflow, Shopify, Framer, and custom Next.js builds.
-          </div>
-</div>
+<FaqItem question="Is the SEOtriks WordPress plugin strictly required?">No. The WordPress companion plugin is entirely optional. It simply enables 1-click publishing of approved AI recommendations and direct schema synchronization. SEOtriks audits any website regardless of CMS, including Webflow, Shopify, Framer, and custom Next.js builds.</FaqItem>
 </div>
 </section>
 

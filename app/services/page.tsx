@@ -1,3 +1,6 @@
+import { FaqItem } from "../FaqItem";
+
+
 
 export default function Page() {
   return (
@@ -827,105 +830,25 @@ export default function Page() {
 
 <div className="space-y-space-sm" id="services-faq-container">
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">What is the main purpose of SEOtriks?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            SEOtriks bridges the gap between identifying SEO issues and actually fixing them. Instead of dumping raw spreadsheets of technical errors onto your team, it audits your site, prioritizes issues based on real organic search impact, and generates pre-configured fixes you can approve with a single click.
-          </div>
-</div>
+<FaqItem question="What is the main purpose of SEOtriks?">SEOtriks bridges the gap between identifying SEO issues and actually fixing them. Instead of dumping raw spreadsheets of technical errors onto your team, it audits your site, prioritizes issues based on real organic search impact, and generates pre-configured fixes you can approve with a single click.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">Do I need prior SEO experience to use SEOtriks?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            No. SEOtriks was specifically engineered so founders, product managers, and developers without deep SEO backgrounds can execute enterprise-grade technical optimizations. Every issue includes plain-English explanations of why it matters, what the fix does, and the expected business benefit.
-          </div>
-</div>
+<FaqItem question="Do I need prior SEO experience to use SEOtriks?">No. SEOtriks was specifically engineered so founders, product managers, and developers without deep SEO backgrounds can execute enterprise-grade technical optimizations. Every issue includes plain-English explanations of why it matters, what the fix does, and the expected business benefit.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">How often does Site Audit crawl my website?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            By default, complete automated crawls run weekly. High-tier plans support daily crawls. Furthermore, you can manually trigger on-demand crawls immediately following a major deployment or redesign, and SEO Guard constantly monitors key landing pages on an hourly schedule.
-          </div>
-</div>
+<FaqItem question="How often does Site Audit crawl my website?">By default, complete automated crawls run weekly. High-tier plans support daily crawls. Furthermore, you can manually trigger on-demand crawls immediately following a major deployment or redesign, and SEO Guard constantly monitors key landing pages on an hourly schedule.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">How does the SEO Priority Engine calculate task urgency?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Our algorithmic engine weighs four specific telemetry signals: current organic impressions from Google Search Console, estimated CTR lift from the repair, severity of search engine crawler penalty (e.g. indexability blocks vs. missing alt tags), and estimated developer effort required to patch the code.
-          </div>
-</div>
+<FaqItem question="How does the SEO Priority Engine calculate task urgency?">Our algorithmic engine weighs four specific telemetry signals: current organic impressions from Google Search Console, estimated CTR lift from the repair, severity of search engine crawler penalty (e.g. indexability blocks vs. missing alt tags), and estimated developer effort required to patch the code.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">Does SEOtriks make changes to my website directly without approval?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Never. SEOtriks is built on a "Human-in-the-Loop" architecture. While our platform writes and formats the code or copy patch, zero modifications are committed to your live environment without explicit manual approval from an authorized workspace administrator.
-          </div>
-</div>
+<FaqItem question="Does SEOtriks make changes to my website directly without approval?">Never. SEOtriks is built on a &quot;Human-in-the-Loop&quot; architecture. While our platform writes and formats the code or copy patch, zero modifications are committed to your live environment without explicit manual approval from an authorized workspace administrator.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">How does SEO Guard prevent sudden traffic drops?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Most sudden traffic drops are caused by accidental engineering errors—such as dev staging headers deploying to production with a <code className="font-mono text-xs">noindex</code> directive or broken canonical loops. SEO Guard pings critical templates around the clock and fires real-time alerts through Slack, webhook, or email within minutes of detection.
-          </div>
-</div>
+<FaqItem question="How does SEO Guard prevent sudden traffic drops?">Most sudden traffic drops are caused by accidental engineering errors—such as dev staging headers deploying to production with a <code className="font-mono text-xs">noindex</code> directive or broken canonical loops. SEO Guard pings critical templates around the clock and fires real-time alerts through Slack, webhook, or email within minutes of detection.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">Can I connect multiple Google Search Console properties?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Yes. You can link multiple domains, subdomains, and international URL-prefix properties under a single account. Workspace permissions let you delegate specific properties to dedicated team members or agency clients.
-          </div>
-</div>
+<FaqItem question="Can I connect multiple Google Search Console properties?">Yes. You can link multiple domains, subdomains, and international URL-prefix properties under a single account. Workspace permissions let you delegate specific properties to dedicated team members or agency clients.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">How does WordPress integration work?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Through our lightweight, high-performance WordPress plugin or standard REST API endpoints. Approved changes—such as title tag revisions, meta descriptions, or schema markup injections—are transmitted via encrypted API calls without slowing down your PHP page rendering.
-          </div>
-</div>
+<FaqItem question="How does WordPress integration work?">Through our lightweight, high-performance WordPress plugin or standard REST API endpoints. Approved changes—such as title tag revisions, meta descriptions, or schema markup injections—are transmitted via encrypted API calls without slowing down your PHP page rendering.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">Does SEOtriks guarantee rank #1 on Google?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            No honest software can guarantee specific search rankings. Google's ranking algorithms evaluate hundreds of dynamic signals, competitor adjustments, and user behavior trends. What SEOtriks guarantees is complete technical compliance, elimination of crawl barriers, optimized semantic relevance, and immediate warning against regressions.
-          </div>
-</div>
+<FaqItem question="Does SEOtriks guarantee rank #1 on Google?">No honest software can guarantee specific search rankings. Google's ranking algorithms evaluate hundreds of dynamic signals, competitor adjustments, and user behavior trends. What SEOtriks guarantees is complete technical compliance, elimination of crawl barriers, optimized semantic relevance, and immediate warning against regressions.</FaqItem>
 
-<div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
-<button className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors" type="button">
-<span className="font-headline-sm text-headline-sm text-jet-black">Can digital marketing agencies use this for client reporting?</span>
-<span className="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
-</button>
-<div className="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-on-surface-variant">
-            Absolutely. Agency and Enterprise tiers include complete white-label reporting with custom client logos, domain-branded email deliveries, multi-client workspace partitioning, and automated weekly or monthly PDF performance summaries.
-          </div>
-</div>
+<FaqItem question="Can digital marketing agencies use this for client reporting?">Absolutely. Agency and Enterprise tiers include complete white-label reporting with custom client logos, domain-branded email deliveries, multi-client workspace partitioning, and automated weekly or monthly PDF performance summaries.</FaqItem>
 </div>
 </div>
 </section>
