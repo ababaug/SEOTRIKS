@@ -107,7 +107,7 @@ export default function Page() {
 </div>
 </div>
 </div>
-<div className="pt-space-md">
+<div className="pt-space-md mt-auto">
 <a className="w-full py-2.5 px-space-md rounded bg-surface-container text-jet-black font-label-lg text-label-lg flex items-center justify-center hover:bg-powder-blue/30 transition-colors shadow-sm" href="#">
               Start Free
             </a>
@@ -172,7 +172,7 @@ export default function Page() {
 </div>
 </div>
 </div>
-<div className="pt-space-md">
+<div className="pt-space-md mt-auto">
 <a className="w-full py-2.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-dusk-blue transition-colors shadow-sm" href="#">
               Start Starter
             </a>
@@ -249,7 +249,7 @@ export default function Page() {
 </div>
 </div>
 </div>
-<div className="pt-space-md">
+<div className="pt-space-md mt-auto">
 <a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:opacity-95 transition-opacity shadow-md" href="#">
               Start Growth
             </a>
@@ -322,7 +322,7 @@ export default function Page() {
 </div>
 </div>
 </div>
-<div className="pt-space-md">
+<div className="pt-space-md mt-auto">
 <a className="w-full py-2.5 px-space-md rounded bg-jet-black text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-primary transition-colors shadow-sm" href="#">
               Start Pro
             </a>
