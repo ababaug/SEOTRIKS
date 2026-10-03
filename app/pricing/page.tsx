@@ -9,7 +9,7 @@ export default function Page() {
 
 <div className="w-full flex flex-col items-center" id="pricing-engine">
 
-<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg text-center relative overflow-hidden animate-fade-in-up">
+<section className=" w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg text-center relative overflow-hidden animate-fade-in-up">
 
 <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-gradient-to-b from-powder-blue/25 via-light-cyan/35 to-transparent rounded-full blur-3xl -z-10 pointer-events-none animate-float"></div>
 <div className="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded-full text-secondary font-label-md text-label-md mb-space-md">
@@ -48,8 +48,8 @@ export default function Page() {
 </div>
 </section>
 
-<section className="w-full max-w-[1280px] mx-auto px-margin py-space-md">
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
+<section className="reveal w-full max-w-[1280px] mx-auto px-margin py-space-md">
+<div className="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
 
 <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative h-full">
 <div className="flex flex-col flex-1">
@@ -110,7 +110,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-surface-container text-jet-black font-label-lg text-label-lg flex items-center justify-center hover:bg-powder-blue/30 hover:scale-105 transition-all duration-300 shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-surface-container text-jet-black font-label-lg text-label-lg flex items-center justify-center hover:bg-powder-blue/30 btn-effect hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Free
             </a>
 </div>
@@ -175,7 +175,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-dusk-blue hover:scale-105 transition-all duration-300 shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-dusk-blue btn-effect hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Starter
             </a>
 </div>
@@ -252,7 +252,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-md" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center btn-effect hover:opacity-95 btn-effect hover:scale-105 transition-all duration-300 shadow-md" href="#">
               Start Growth
             </a>
 </div>
@@ -325,7 +325,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-jet-black text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-primary hover:scale-105 transition-all duration-300 shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-jet-black text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-primary btn-effect hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Pro
             </a>
 </div>
@@ -333,7 +333,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg">
+<section className="reveal w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg">
 <div className="text-center max-w-2xl mx-auto mb-space-lg">
 <span className="font-label-md text-label-md uppercase tracking-wider text-burnt-peach font-semibold">Tailored Workflows</span>
 <h2 className="font-headline-lg text-headline-lg text-jet-black mt-1">Who is each plan designed for?</h2>
@@ -341,7 +341,7 @@ export default function Page() {
           From solo side-projects to high-output client agencies, SEOtriks scales with your analytical demand.
         </p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div className="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
 <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
 <div>
@@ -413,7 +413,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg">
+<section className="reveal w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg">
 <div className="text-center max-w-3xl mx-auto mb-space-lg">
 <span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Feature Matrix</span>
 <h2 className="font-headline-lg text-headline-lg text-jet-black mt-1">Detailed Plan Breakdown</h2>
@@ -582,7 +582,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="w-full max-w-[1000px] mx-auto px-margin pt-space-xl pb-space-lg">
+<section className="reveal w-full max-w-[1000px] mx-auto px-margin pt-space-xl pb-space-lg">
 <div className="text-center max-w-2xl mx-auto mb-space-lg">
 <span className="font-label-md text-label-md uppercase tracking-wider text-burnt-peach font-semibold">Clear Answers</span>
 <h2 className="font-headline-lg text-headline-lg text-jet-black mt-1">Frequently Asked Questions</h2>
@@ -608,7 +608,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-lg pb-space-xl">
+<section className="reveal w-full max-w-[1280px] mx-auto px-margin pt-space-lg pb-space-xl">
 <div className="bg-primary rounded-2xl p-space-xl text-center text-on-primary relative overflow-hidden shadow-xl">
 
 <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-burnt-peach/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -624,7 +624,7 @@ export default function Page() {
             Run your first SEO audit in under 60 seconds and turn complex website problems into an orderly, verified action plan.
           </p>
 <div className="flex flex-col sm:flex-row items-center gap-space-md w-full justify-center">
-<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-space-xs" href="#">
+<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg btn-effect hover:opacity-95 btn-effect hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-space-xs" href="#">
 <span>Start Free (No Credit Card Required)</span>
 <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>
@@ -643,7 +643,7 @@ export default function Page() {
 </div>
 
 
-</div></main><footer className="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(41,50,65,0.03)]"><div className="max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div className="lg:col-span-4 flex flex-col items-start gap-space-md"><div className="flex items-center gap-space-sm"><div className="w-8 h-8 rounded bg-primary flex items-center justify-center"><span className="material-symbols-outlined text-on-primary text-[18px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></div><p className="font-body-md text-body-md text-on-surface-variant max-w-sm">SEO made actionable. Find what matters. Know what to fix. See what improved.</p><div className="flex items-center gap-space-sm pt-space-xs"><a aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">share</span></a><a aria-label="X" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">tag</span></a><a aria-label="Facebook" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">public</span></a><a aria-label="YouTube" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">play_circle</span></a><a aria-label="Instagram" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">photo_camera</span></a></div></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Product</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Features</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-agent" href="#">SEO Agent</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="site-audit" href="#">Site Audit</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-guard" href="#">SEO Guard</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-visibility" href="#">AI Visibility</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Resources</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-guides" href="#">SEO Guides</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="help-center" href="#">Help Center</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Documentation</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Company</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="partners" href="#">Partners</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Legal</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy" href="#">Privacy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms" href="#">Terms</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cookie-policy" href="#">Cookie Policy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="data-processing" href="#">Data Processing</a></div></div><div className="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container/50 rounded-xl px-space-md py-space-sm"><span className="font-body-sm text-body-sm text-on-surface-variant">© 2025 SEOtriks Inc. All rights reserved.</span><div className="flex items-center gap-space-md"><span className="font-label-sm text-label-sm text-secondary">Enterprise Precision SEO Platform</span></div></div></div></footer>
+</div></main><footer className="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(41,50,65,0.03)]"><div className="max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg"><div className="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div className="lg:col-span-4 flex flex-col items-start gap-space-md"><div className="flex items-center gap-space-sm"><div className="w-8 h-8 rounded bg-primary flex items-center justify-center"><span className="material-symbols-outlined text-on-primary text-[18px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></div><p className="font-body-md text-body-md text-on-surface-variant max-w-sm">SEO made actionable. Find what matters. Know what to fix. See what improved.</p><div className="flex items-center gap-space-sm pt-space-xs"><a aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">share</span></a><a aria-label="X" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">tag</span></a><a aria-label="Facebook" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">public</span></a><a aria-label="YouTube" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">play_circle</span></a><a aria-label="Instagram" className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-dusk-blue hover:bg-light-cyan hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined text-[20px]">photo_camera</span></a></div></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Product</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Features</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-agent" href="#">SEO Agent</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="site-audit" href="#">Site Audit</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-guard" href="#">SEO Guard</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-visibility" href="#">AI Visibility</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Resources</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seo-guides" href="#">SEO Guides</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="help-center" href="#">Help Center</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Documentation</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Company</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="partners" href="#">Partners</a></div><div className="lg:col-span-2 flex flex-col gap-space-sm"><span className="font-label-md text-label-md uppercase tracking-wider text-dusk-blue font-semibold">Legal</span><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy" href="#">Privacy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms" href="#">Terms</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cookie-policy" href="#">Cookie Policy</a><a className="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="data-processing" href="#">Data Processing</a></div></div><div className="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container/50 rounded-xl px-space-md py-space-sm"><span className="font-body-sm text-body-sm text-on-surface-variant">© 2025 SEOtriks Inc. All rights reserved.</span><div className="flex items-center gap-space-md"><span className="font-label-sm text-label-sm text-secondary">Enterprise Precision SEO Platform</span></div></div></div></footer>
     </>
   );
 }
