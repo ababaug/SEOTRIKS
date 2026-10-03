@@ -4,7 +4,7 @@ import { useState, ReactNode } from "react";
 export function FaqItem({ question, children }: { question: string, children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+    <div className="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
       <button
         className="faq-toggle w-full p-space-lg text-left flex items-center justify-between gap-space-md hover:bg-light-cyan/30 transition-colors"
         type="button"

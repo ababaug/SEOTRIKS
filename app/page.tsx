@@ -3,11 +3,11 @@ export const metadata = { title: "SEOtriks: SEO Audit Tool & AI SEO Software", d
 export default function Page() {
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="home" href="/">Home</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 transition-opacity" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="home" href="/">Home</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 hover:scale-105 transition-all duration-300" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
 
-<section className="relative w-full overflow-hidden bg-gradient-to-b from-light-cyan/30 via-surface to-surface-container-low/40 py-16 lg:py-24">
+<section className="relative w-full overflow-hidden bg-gradient-to-b animate-fade-in-up from-light-cyan/30 via-surface to-surface-container-low/40 py-16 lg:py-24">
 
-<div className="absolute inset-0 pointer-events-none opacity-40">
+<div className="absolute inset-0 pointer-events-none opacity-40 animate-pulse-slow">
 <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <radialGradient cx="60%" cy="35%" id="meshHero" r="55%">
@@ -129,7 +129,7 @@ export default function Page() {
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Discovered on /enterprise-features • 14,200 monthly organic visits at risk</p>
 </div>
 </div>
-<button className="px-space-md py-1.5 rounded bg-jet-black text-on-primary font-label-md text-label-md hover:bg-dusk-blue transition-colors shrink-0">
+<button className="px-space-md py-1.5 rounded bg-jet-black text-on-primary font-label-md text-label-md hover:bg-dusk-blue hover:scale-105 transition-all duration-300 shrink-0">
                   Review Fix
                 </button>
 </div>
@@ -545,7 +545,7 @@ export default function Page() {
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter relative">
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-light-cyan text-primary flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               01
@@ -561,7 +561,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-light-cyan text-primary flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               02
@@ -577,7 +577,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-burnt-peach/20 text-burnt-peach flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               03
@@ -593,7 +593,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-light-cyan text-primary flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               04
@@ -609,7 +609,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-light-cyan text-primary flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               05
@@ -625,7 +625,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div>
 <div className="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-sm mb-space-sm font-bold">
               06

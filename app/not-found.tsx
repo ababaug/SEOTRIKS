@@ -14,13 +14,13 @@ export default function NotFound() {
         The page may have moved, changed or no longer exist. Let's get you back on track.
       </p>
       <div className="flex items-center gap-space-md">
-        <Link href="/" className="px-space-lg py-3 rounded bg-primary text-on-primary font-label-lg text-label-lg hover:bg-dusk-blue transition-colors shadow-sm">
+        <Link href="/" className="px-space-lg py-3 rounded bg-primary text-on-primary font-label-lg text-label-lg hover:bg-dusk-blue hover:scale-105 transition-all duration-300 shadow-sm">
           Go Home
         </Link>
-        <Link href="/services" className="px-space-lg py-3 rounded bg-surface-container text-jet-black font-label-lg text-label-lg hover:bg-powder-blue/30 transition-colors shadow-sm">
+        <Link href="/services" className="px-space-lg py-3 rounded bg-surface-container text-jet-black font-label-lg text-label-lg hover:bg-powder-blue/30 hover:scale-105 transition-all duration-300 shadow-sm">
           Explore SEOtriks
         </Link>
-        <Link href="/blog" className="px-space-lg py-3 rounded bg-surface-container text-jet-black font-label-lg text-label-lg hover:bg-powder-blue/30 transition-colors shadow-sm">
+        <Link href="/blog" className="px-space-lg py-3 rounded bg-surface-container text-jet-black font-label-lg text-label-lg hover:bg-powder-blue/30 hover:scale-105 transition-all duration-300 shadow-sm">
           Visit Blog
         </Link>
       </div>

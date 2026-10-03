@@ -4,13 +4,13 @@ import { FaqItem } from "../FaqItem";
 export default function Page() {
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="/">Home</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 transition-opacity" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="/">Home</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 hover:scale-105 transition-all duration-300" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
 
 <div className="w-full flex flex-col items-center" id="pricing-engine">
 
-<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg text-center relative overflow-hidden">
+<section className="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg text-center relative overflow-hidden animate-fade-in-up">
 
-<div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-gradient-to-b from-powder-blue/25 via-light-cyan/35 to-transparent rounded-full blur-3xl -z-10 pointer-events-none"></div>
+<div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[620px] h-[320px] bg-gradient-to-b from-powder-blue/25 via-light-cyan/35 to-transparent rounded-full blur-3xl -z-10 pointer-events-none animate-float"></div>
 <div className="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded-full text-secondary font-label-md text-label-md mb-space-md">
 <span className="material-symbols-outlined text-[16px] text-burnt-peach">verified_user</span>
 <span>Honest, Transparent Tiering • Zero Hidden Overage Fees</span>
@@ -50,7 +50,7 @@ export default function Page() {
 <section className="w-full max-w-[1280px] mx-auto px-margin py-space-md">
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative h-full">
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Free</span>
@@ -109,13 +109,13 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-surface-container text-jet-black font-label-lg text-label-lg flex items-center justify-center hover:bg-powder-blue/30 transition-colors shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-surface-container text-jet-black font-label-lg text-label-lg flex items-center justify-center hover:bg-powder-blue/30 hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Free
             </a>
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative h-full">
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Starter</span>
@@ -174,7 +174,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-dusk-blue transition-colors shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-dusk-blue hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Starter
             </a>
 </div>
@@ -251,13 +251,13 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:opacity-95 transition-opacity shadow-md" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-md" href="#">
               Start Growth
             </a>
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-md transition-shadow relative h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative h-full">
 <div className="flex flex-col flex-1">
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-headline-sm text-headline-sm text-jet-black">Pro</span>
@@ -324,7 +324,7 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-jet-black text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-primary transition-colors shadow-sm" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-jet-black text-on-primary font-label-lg text-label-lg flex items-center justify-center hover:bg-primary hover:scale-105 transition-all duration-300 shadow-sm" href="#">
               Start Pro
             </a>
 </div>
@@ -342,7 +342,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-md">
 <span className="material-symbols-outlined text-[28px]">search</span>
@@ -359,7 +359,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-light-cyan flex items-center justify-center text-dusk-blue mb-space-md">
 <span className="material-symbols-outlined text-[28px]">storefront</span>
@@ -376,7 +376,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-burnt-peach/10 flex items-center justify-center text-burnt-peach mb-space-md">
 <span className="material-symbols-outlined text-[28px]">trending_up</span>
@@ -393,7 +393,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
+<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
 <div>
 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md">
 <span className="material-symbols-outlined text-[28px]">hub</span>
@@ -623,7 +623,7 @@ export default function Page() {
             Run your first SEO audit in under 60 seconds and turn complex website problems into an orderly, verified action plan.
           </p>
 <div className="flex flex-col sm:flex-row items-center gap-space-md w-full justify-center">
-<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg hover:opacity-95 transition-opacity shadow-lg flex items-center justify-center gap-space-xs" href="#">
+<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-space-xs" href="#">
 <span>Start Free (No Credit Card Required)</span>
 <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>

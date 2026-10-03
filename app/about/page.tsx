@@ -3,7 +3,7 @@ export const metadata = { title: "About SEOtriks | Making SEO More Actionable", 
 export default function Page() {
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="/">Home</a><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 transition-opacity" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]"><div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div className="flex items-center gap-space-xl"><a className="flex items-center gap-space-sm" data-path="home" href="/"><div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]"><span className="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span className="font-headline-sm text-headline-sm text-jet-black tracking-tight">SEOtriks</span></a><nav className="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg"><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="/">Home</a><a aria-current="page" className="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg" data-path="about" href="/about">About</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="/services">Services</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="/blog">Blog</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="/contact">Contact</a><a className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="/pricing">Pricing</a></nav></div><div className="flex items-center gap-space-md"><a className="hidden sm:inline-flex px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="login" href="#">Log In</a><a className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] hover:opacity-95 hover:scale-105 transition-all duration-300" data-path="signup" href="#">Start Free</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main className="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div className="flex flex-col w-full">
 
 <section className="relative w-full overflow-hidden bg-surface-container-low py-space-xl">
 <div className="max-w-[1280px] mx-auto px-margin">
@@ -39,7 +39,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter relative">
 
-<div className="flex flex-col bg-surface-container-low rounded-lg p-space-lg shadow-sm relative group hover:shadow-md transition-shadow">
+<div className="flex flex-col bg-surface-container-low rounded-lg p-space-lg shadow-sm relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="flex items-center justify-between mb-space-md">
 <span className="font-label-md text-label-md text-error uppercase tracking-wider font-semibold">01 / Complexity</span>
 <span className="material-symbols-outlined text-error text-[20px]">bubble_chart</span>
@@ -69,7 +69,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col bg-surface-container-high rounded-lg p-space-lg shadow-sm relative group hover:shadow-md transition-shadow">
+<div className="flex flex-col bg-surface-container-high rounded-lg p-space-lg shadow-sm relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="flex items-center justify-between mb-space-md">
 <span className="font-label-md text-label-md text-dusk-blue uppercase tracking-wider font-semibold">02 / Clarity</span>
 <span className="material-symbols-outlined text-dusk-blue text-[20px]">filter_alt</span>
@@ -262,7 +262,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-burnt-peach text-on-primary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">code</span>
 </div>
@@ -278,7 +278,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-dusk-blue text-on-primary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">fact_check</span>
 </div>
@@ -303,7 +303,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-secondary text-on-secondary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">toggle_on</span>
 </div>
@@ -323,7 +323,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">wifi_tethering</span>
 </div>
@@ -344,7 +344,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-burnt-peach text-on-primary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">shield</span>
 </div>
@@ -362,7 +362,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div className="flex flex-col rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 <div className="w-10 h-10 rounded bg-dusk-blue text-on-primary flex items-center justify-center mb-space-md shadow-sm">
 <span className="material-symbols-outlined text-[22px]">forum</span>
 </div>
@@ -393,7 +393,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-burnt-peach uppercase">Autonomous Assistant</span>
@@ -409,7 +409,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-secondary uppercase">Deterministic Sorting</span>
@@ -425,7 +425,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-burnt-peach uppercase">1-Click Execution</span>
@@ -441,7 +441,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-dusk-blue uppercase">Zero-Downtime Sentinel</span>
@@ -457,7 +457,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-secondary uppercase">Causal Correlation</span>
@@ -473,7 +473,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-burnt-peach uppercase">Proactive Maintenance</span>
@@ -489,7 +489,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-secondary uppercase">Market Intelligence</span>
@@ -505,7 +505,7 @@ export default function Page() {
           </div>
 </div>
 
-<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between lg:col-span-2">
+<div className="bg-surface rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between lg:col-span-2">
 <div>
 <div className="flex items-center justify-between mb-space-sm">
 <span className="font-label-sm text-label-sm font-semibold text-burnt-peach uppercase">Next-Gen Search (GEO / LLMs)</span>
@@ -729,7 +729,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 
-<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
 <div className="h-64 bg-surface-container relative">
 <img className="w-full h-full object-cover" data-alt="Portrait of a visionary male software founder in his late 30s with wireframe spectacles and a casual slate-blue collared shirt, photographed with warm, soft editorial lighting in a minimalist architectural studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPCPHHj7-fRxQ8bhlAOqEczy2tHNzBObOIFC5Vtha01YPJDExMh3bO8bFX7gOZkoq7E1PafvSNV1SI7MrLFLXh2TfIvrUYQuaLDs2FB1vZfR7Et4Gw4JhbznM379oN0cEBxp5g_vOkk941-GskuR8DHiXMGeOxPMLHKe21UmhIjK-DINllkXB1RKvzVY2L2wfGF8fW3FHBIjVW-v0IeSN7eVezOCqMhNL8UehE_T2ez8AG3m3vzPKW"/>
 </div>
@@ -752,7 +752,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
 <div className="h-64 bg-surface-container relative">
 <img className="w-full h-full object-cover" data-alt="Portrait of a female Chief Technology Officer in her early 30s with focused, friendly expression, subtle terracotta-hued modern blazer, set against a calm architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFB0FSRCV1OYZ1kl5Mk35uEjGvjF5yWxdrjhB7NQSycIT1eGR_QudScd2ziM1aUtcZYYAPj84rFsBbgC7cKOvfm0uSnQpiPyZSW5DjM5bUb2YYfmcO5PaJlhxL2ZVLmFK7saLvAWU6pZtw5-USbFIfgcP6F0w-_qahMQeyhegD3zvGV8SvVLrQXdT6yNepo1946r55cbLf_MCs9e4vOi_YdCcegM-ZRthtwaNfDgh2NmDJIzmTKkTd"/>
 </div>
@@ -775,7 +775,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
 <div className="h-64 bg-surface-container relative">
 <img className="w-full h-full object-cover" data-alt="Editorial portrait of an experienced male product design director in his late 30s with charcoal minimal sweater, seated in an airy modern studio with thoughtful gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtkcDX6HzIl3660XjgaE5QUxaq6VQNwY2WPELN6BiDY1cLuVkYT6uMzHgT2I4C_ObOTrC1Z6hDkOCALW_61aQWYfh-BAeLW8EewaOGVVIjHLFPg2ETpNNWwWuYE6oII9L4iWGbNL7Ii2uJ678fRFxfz3NtMFDZJOayypWEdG6vdUy2Oq6fCfrEf8pOQIIeCOGxn17qJMCvT0Sx69wHf3eVSOYzS5KHiY7cYBxHlECsKhlQ56nl2VyZ"/>
 </div>
