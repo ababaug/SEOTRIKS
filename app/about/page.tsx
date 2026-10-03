@@ -1,4 +1,4 @@
-import { Header } from "../Header";
+import { Header } from "@/app/components/Header";
 export const metadata = { title: "About SEOtriks | Making SEO More Actionable", description: "Learn why SEOtriks was created to make SEO easier to understand, prioritize and act on for businesses, marketers and website owners." };
 
 export default function Page() {
