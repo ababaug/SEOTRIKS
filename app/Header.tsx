@@ -21,8 +21,8 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-[60] bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(41,50,65,0.06)]">
-        <div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter">
-          <div className="flex items-center gap-space-xl">
+        <div className="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter relative">
+
             <Link className="flex items-center gap-space-sm" href="/">
               <div className="w-9 h-9 rounded bg-primary flex items-center justify-center shadow-[0_2px_8px_-2px_rgba(41,50,65,0.18)]">
                 <span className="material-symbols-outlined text-on-primary text-[22px]">insights</span>
@@ -31,7 +31,7 @@ export function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-space-xs">
+            <nav className="hidden lg:flex items-center gap-space-xs absolute left-1/2 -translate-x-1/2">
               {links.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -49,8 +49,6 @@ export function Header() {
                 );
               })}
             </nav>
-          </div>
-
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-space-md">
             <Link className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#">Log In</Link>
