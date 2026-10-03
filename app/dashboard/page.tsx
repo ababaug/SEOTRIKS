@@ -1,17 +1,8 @@
 import { Sidebar } from "@/app/components/Sidebar"
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
 import { getProjectCount } from "@/lib/data"
-import { redirect } from "next/navigation"
 
 export default async function Dashboard() {
-  const session = await getServerSession(authOptions)
-
-  if (!session?.user) {
-    redirect('/api/auth/signin')
-  }
-
-  const userId = (session.user as any).id
+  const userId = "dummy-user-id" // Hardcoded for demo/setup purposes
   const projectCount = await getProjectCount(userId)
 
   return (

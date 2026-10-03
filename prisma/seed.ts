@@ -2,13 +2,10 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const admin = await prisma.user.upsert({
-    where: { email: 'admin@example.com' },
-    update: {},
-    create: {
-      email: 'admin@example.com',
-      name: 'Admin User',
-      role: 'ADMIN',
+  const org = await prisma.organization.create({
+    data: {
+      name: 'Acme Corp',
+      billingPlan: 'PRO',
       projects: {
         create: [
           {
@@ -23,7 +20,22 @@ async function main() {
       }
     }
   })
-  console.log('Seeded User:', admin)
+
+  const admin = await prisma.user.upsert({
+    where: { email: 'admin@example.com' },
+    update: {
+      organizationId: org.id
+    },
+    create: {
+      email: 'admin@example.com',
+      name: 'Admin User',
+      role: 'ADMIN',
+      organizationId: org.id
+    }
+  })
+
+  console.log('Seeded Org:', org.name)
+  console.log('Seeded User:', admin.email)
 }
 
 main()

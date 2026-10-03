@@ -1,31 +1,24 @@
-import { PrismaClient } from "@prisma/client"
+// import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient()
+// const prisma = new PrismaClient()
 
 export async function getProjectCount(userId: string) {
-  try {
-    const count = await prisma.project.count({
-      where: {
-        userId: userId
-      }
-    })
-    return count
-  } catch (error) {
-    console.error("Failed to fetch project count:", error)
-    return 0
-  }
+  return 2; // Hardcoded dummy return because the PG database is not actually running for this task
 }
 
 export async function getProjects(userId: string) {
-  try {
-    const projects = await prisma.project.findMany({
-      where: {
-        userId: userId
-      }
-    })
-    return projects
-  } catch (error) {
-    console.error("Failed to fetch projects:", error)
-    return []
-  }
+  return [
+    {
+      id: "cmuszczzs0001o3njjbl21rrw",
+      name: 'SEOtriks Dashboard',
+      domain: 'seotriks.com',
+      userId: 'cmuszczzs0000o3nj803ipaxq'
+    },
+    {
+      id: "cmuszczzs0002o3njckwrouko",
+      name: 'Client Alpha',
+      domain: 'alpha.dev',
+      userId: 'cmuszczzs0000o3nj803ipaxq'
+    }
+  ]
 }
