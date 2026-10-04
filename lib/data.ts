@@ -1,24 +1,45 @@
-// import { PrismaClient } from "@prisma/client"
+import { PrismaClient } from "@prisma/client"
 
-// const prisma = new PrismaClient()
+const prisma = new PrismaClient()
 
 export async function getProjectCount(userId: string) {
-  return 2; // Hardcoded dummy return because the PG database is not actually running for this task
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { organizationId: true }
+    })
+
+    if (!user || !user.organizationId) return 0;
+
+    const count = await prisma.project.count({
+      where: {
+        organizationId: user.organizationId
+      }
+    })
+    return count
+  } catch (error) {
+    console.error("Failed to fetch project count:", error)
+    return 0
+  }
 }
 
 export async function getProjects(userId: string) {
-  return [
-    {
-      id: "cmuszczzs0001o3njjbl21rrw",
-      name: 'SEOtriks Dashboard',
-      domain: 'seotriks.com',
-      userId: 'cmuszczzs0000o3nj803ipaxq'
-    },
-    {
-      id: "cmuszczzs0002o3njckwrouko",
-      name: 'Client Alpha',
-      domain: 'alpha.dev',
-      userId: 'cmuszczzs0000o3nj803ipaxq'
-    }
-  ]
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { organizationId: true }
+    })
+
+    if (!user || !user.organizationId) return [];
+
+    const projects = await prisma.project.findMany({
+      where: {
+        organizationId: user.organizationId
+      }
+    })
+    return projects
+  } catch (error) {
+    console.error("Failed to fetch projects:", error)
+    return []
+  }
 }

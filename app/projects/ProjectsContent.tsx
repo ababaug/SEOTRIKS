@@ -1,4 +1,6 @@
-export function ProjectsContent() {
+
+export function ProjectsContent({ projects = [] }: { projects: any[] }) {
+
   return (
 <main className="w-full pt-16 px-gutter-lg pb-margin-lg bg-background min-h-screen">
 <div className="flex flex-col w-full">
@@ -593,188 +595,47 @@ export function ProjectsContent() {
 </tr>
 </thead>
 <tbody className="divide-y divide-surface-variant/40 font-body-sm text-body-sm text-on-surface">
-{/*  Row 1  */}
-<tr className="hover:bg-surface-container-high/60 transition-colors">
-<td className="py-3.5 px-space-md">
-<div className="flex items-center gap-space-sm">
-<div className="w-7 h-7 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
-<span className="material-symbols-outlined text-[16px]">language</span>
-</div>
-<div className="flex flex-col">
-<span className="font-label-lg text-label-lg font-semibold text-on-surface">app.seotriks.io</span>
-<span className="font-mono-code text-mono-code text-[11px] text-outline">Application Subdomain</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-space-md">
-<span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-mono-code text-[11px] bg-secondary-container/20 text-secondary">
-<span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Sync
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[11px] text-on-surface-variant">
-                V2.4 Crawler JS
-              </td>
-<td className="py-3.5 px-space-md">
-<span className="px-2 py-0.5 rounded font-mono-code text-[11px] bg-surface-container-high text-primary">
-                  Cloudflare Worker
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[13px] text-right text-on-surface font-semibold">
-                320.4K
-              </td>
-<td className="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
-                Daily @ 02:00 UTC
-              </td>
-<td className="py-3.5 px-space-md text-right">
-<div className="inline-flex items-center gap-1">
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Manage Domain">
-<span className="material-symbols-outlined text-[18px]">tune</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Pause Monitoring">
-<span className="material-symbols-outlined text-[18px]">pause_circle</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-tertiary hover:bg-surface-variant transition-colors" title="Delete Domain">
-<span className="material-symbols-outlined text-[18px]">delete</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 2  */}
-<tr className="hover:bg-surface-container-high/60 transition-colors">
-<td className="py-3.5 px-space-md">
-<div className="flex items-center gap-space-sm">
-<div className="w-7 h-7 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
-<span className="material-symbols-outlined text-[16px]">language</span>
-</div>
-<div className="flex flex-col">
-<span className="font-label-lg text-label-lg font-semibold text-on-surface">docs.cloudscale.io</span>
-<span className="font-mono-code text-mono-code text-[11px] text-outline">Knowledge Base</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-space-md">
-<span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-mono-code text-[11px] bg-secondary-container/20 text-secondary">
-<span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Sync
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[11px] text-on-surface-variant">
-                GTM-KD9402
-              </td>
-<td className="py-3.5 px-space-md">
-<span className="px-2 py-0.5 rounded font-mono-code text-[11px] bg-surface-container-high text-primary">
-                  Fastly Compute
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[13px] text-right text-on-surface font-semibold">
-                89.1K
-              </td>
-<td className="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
-                Weekly on Monday
-              </td>
-<td className="py-3.5 px-space-md text-right">
-<div className="inline-flex items-center gap-1">
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Manage Domain">
-<span className="material-symbols-outlined text-[18px]">tune</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Pause Monitoring">
-<span className="material-symbols-outlined text-[18px]">pause_circle</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-tertiary hover:bg-surface-variant transition-colors" title="Delete Domain">
-<span className="material-symbols-outlined text-[18px]">delete</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 3: Token Expired Warning  */}
-<tr className="hover:bg-surface-container-high/60 transition-colors">
-<td className="py-3.5 px-space-md">
-<div className="flex items-center gap-space-sm">
-<div className="w-7 h-7 rounded-lg bg-surface-variant flex items-center justify-center text-tertiary">
-<span className="material-symbols-outlined text-[16px]">sync_problem</span>
-</div>
-<div className="flex flex-col">
-<span className="font-label-lg text-label-lg font-semibold text-on-surface">sandbox-clientstore.net</span>
-<span className="font-mono-code text-mono-code text-[11px] text-outline">Staging Cluster</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-space-md">
-<span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-mono-code text-[11px] bg-tertiary-container text-on-tertiary-container font-semibold">
-<span className="material-symbols-outlined text-[12px]">key_off</span> Token Expired
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[11px] text-outline">
-                Disabled
-              </td>
-<td className="py-3.5 px-space-md">
-<span className="px-2 py-0.5 rounded font-mono-code text-[11px] bg-surface-container-high text-outline">
-                  Direct Origin
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[13px] text-right text-outline">
-                4.2K
-              </td>
-<td className="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
-                Paused
-              </td>
-<td className="py-3.5 px-space-md text-right">
-<div className="inline-flex items-center gap-1">
-<button className="px-2 py-1 bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold rounded hover:bg-tertiary-fixed transition-colors">
-                    Reconnect
-                  </button>
-<button className="p-1 rounded text-on-surface-variant hover:text-tertiary hover:bg-surface-variant transition-colors" title="Delete Domain">
-<span className="material-symbols-outlined text-[18px]">delete</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 4: Secondary  */}
-<tr className="hover:bg-surface-container-high/60 transition-colors">
-<td className="py-3.5 px-space-md">
-<div className="flex items-center gap-space-sm">
-<div className="w-7 h-7 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
-<span className="material-symbols-outlined text-[16px]">language</span>
-</div>
-<div className="flex flex-col">
-<span className="font-label-lg text-label-lg font-semibold text-on-surface">beta-cdn.devstack.org</span>
-<span className="font-mono-code text-mono-code text-[11px] text-outline">Static Edge Cache</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-space-md">
-<span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-mono-code text-[11px] bg-secondary-container/20 text-secondary">
-<span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Sync
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[11px] text-on-surface-variant">
-                V2.4 Crawler JS
-              </td>
-<td className="py-3.5 px-space-md">
-<span className="px-2 py-0.5 rounded font-mono-code text-[11px] bg-surface-container-high text-primary">
-                  Cloudflare Worker
-                </span>
-</td>
-<td className="py-3.5 px-space-md font-mono-code text-mono-code text-[13px] text-right text-on-surface font-semibold">
-                19.5K
-              </td>
-<td className="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
-                Bi-weekly
-              </td>
-<td className="py-3.5 px-space-md text-right">
-<div className="inline-flex items-center gap-1">
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Manage Domain">
-<span className="material-symbols-outlined text-[18px]">tune</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors" title="Pause Monitoring">
-<span className="material-symbols-outlined text-[18px]">pause_circle</span>
-</button>
-<button className="p-1 rounded text-on-surface-variant hover:text-tertiary hover:bg-surface-variant transition-colors" title="Delete Domain">
-<span className="material-symbols-outlined text-[18px]">delete</span>
-</button>
-</div>
-</td>
-</tr>
-</tbody>
+              {projects.length === 0 ? (
+                <tr>
+                  <td colSpan={6} className="px-space-sm py-8 text-center text-on-surface-variant font-body-sm text-body-sm">
+                    No projects found.
+                  </td>
+                </tr>
+              ) : (
+                projects.map((project) => (
+                  <tr key={project.id} className="border-b border-surface-container-highest hover:bg-surface-container-low transition-colors group">
+                    <td className="px-space-sm py-3 text-left">
+                      <div className="flex items-center gap-space-sm">
+                        <div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+                          <span className="material-symbols-outlined text-[18px]">public</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">{project.name}</span>
+                          <span className="font-mono-code text-mono-code text-on-surface-variant text-[10px] mt-0.5">{project.domain}</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-left">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-md text-[11px] font-semibold w-fit">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Active Tracking
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-right font-mono-code text-mono-code text-on-surface">1,492</td>
+                    <td className="px-space-sm py-3 text-right font-mono-code text-mono-code text-on-surface">340</td>
+                    <td className="px-space-sm py-3 text-right">
+                      <div className="flex items-center justify-end gap-1.5 text-secondary font-mono-code text-mono-code text-[11px]">
+                        <span className="material-symbols-outlined text-[14px]">arrow_upward</span>85
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-right">
+                      <button className="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Manage Project">
+                        <span className="material-symbols-outlined text-[18px]">more_vert</span>
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+              </tbody>
 </table>
 </div>
 </div>
