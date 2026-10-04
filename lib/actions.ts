@@ -2,10 +2,20 @@
 
 import { PrismaClient } from "@prisma/client"
 import { revalidatePath } from "next/cache"
+import { getServerSession } from "next-auth"
 
 const prisma = new PrismaClient()
 
+async function getSessionOrThrow() {
+  const session = await getServerSession()
+  if (!session || !session.user) {
+    throw new Error('Unauthorized')
+  }
+  return session
+}
+
 export async function createProject(formData: FormData) {
+  await getSessionOrThrow()
   const name = formData.get('name') as string
   const domain = formData.get('domain') as string
   const organizationId = formData.get('organizationId') as string
@@ -27,6 +37,7 @@ export async function createProject(formData: FormData) {
 }
 
 export async function deleteProject(projectId: string) {
+  await getSessionOrThrow()
   await prisma.project.delete({
     where: { id: projectId }
   })
@@ -36,6 +47,7 @@ export async function deleteProject(projectId: string) {
 }
 
 export async function createKeyword(formData: FormData) {
+  await getSessionOrThrow()
   const term = formData.get('term') as string
   const projectId = formData.get('projectId') as string
 

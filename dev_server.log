@@ -1,0 +1,44 @@
+
+> seotriks@1.0.0 dev
+> next dev
+
+   ▲ Next.js 14.1.0
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 3.9s
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 5.1s (1343 modules)
+Failed to fetch dashboard metrics: PrismaClientInitializationError:
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at $n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7615)
+    at $n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async getDashboardMetrics (webpack-internal:///(rsc)/./lib/data.ts:15:22)
+    at async Dashboard (webpack-internal:///(rsc)/./app/dashboard/page.tsx:16:21) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+ ○ Compiling /projects-hub ...
+ ✓ Compiled /projects-hub in 895ms (1350 modules)
+Failed to fetch projects: PrismaClientInitializationError:
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at $n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7615)
+    at $n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async getProjects (webpack-internal:///(rsc)/./lib/data.ts:67:22)
+    at async ProjectsHub (webpack-internal:///(rsc)/./app/projects-hub/page.tsx:16:22) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
