@@ -31,6 +31,7 @@ model User {
 
   organization   Organization? @relation(fields: [organizationId], references: [id])
   auditLogs      AuditLog[]
+  posts          BlogPost[]
 }
 
 model Project {
@@ -131,4 +132,19 @@ model RolePermission {
   role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade)
 
   @@unique([roleId, resource, action])
+}
+
+model BlogPost {
+  id          String   @id @default(uuid())
+  title       String
+  excerpt     String?
+  content     String
+  slug        String   @unique
+  category    String
+  authorId    String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  author      User     @relation(fields: [authorId], references: [id])
 }

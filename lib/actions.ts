@@ -91,3 +91,27 @@ export async function createRole(formData: FormData) {
 
   revalidatePath('/team-rbac')
 }
+
+export async function createBlogPost(formData: FormData) {
+  const session = await getSessionOrThrow()
+  const title = formData.get('title') as string
+  const content = formData.get('content') as string
+  const category = formData.get('category') as string
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+
+  if (!title || !content || !category) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.blogPost.create({
+    data: {
+      title,
+      content,
+      category,
+      slug,
+      authorId: (session.user as any)?.email || ''
+    }
+  })
+
+  revalidatePath('/blog-full')
+}
