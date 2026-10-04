@@ -124,14 +124,14 @@ export function SettingsContent() {
 {/*  Field 1  */}
 <div className="flex flex-col gap-space-xs">
 <label className="font-label-md text-label-md font-semibold text-on-surface">Legal Company Name</label>
-<input className="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" type="text" value="Stripe Global Inc."/>
+<input className="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" type="text" defaultValue="Stripe Global Inc."/>
 <span className="font-label-xs text-label-xs text-secondary">Displayed on automated executive PDF audits and reports.</span>
 </div>
 {/*  Field 2: Slug with Copy  */}
 <div className="flex flex-col gap-space-xs">
 <label className="font-label-md text-label-md font-semibold text-on-surface">Organization Slug</label>
 <div className="relative flex items-center">
-<input className="w-full pl-3.5 pr-10 py-2.5 rounded-xl bg-surface-container-low font-body-md text-body-md text-secondary font-mono select-all focus:outline-none" readOnly type="text" value="org_seotriks_884920"/>
+<input className="w-full pl-3.5 pr-10 py-2.5 rounded-xl bg-surface-container-low font-body-md text-body-md text-secondary font-mono select-all focus:outline-none" readOnly type="text" defaultValue="org_seotriks_884920"/>
 <button className="absolute right-2 p-1.5 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Copy slug">
 <span className="material-symbols-outlined text-base">content_copy</span>
 </button>
@@ -184,7 +184,7 @@ export function SettingsContent() {
 <div>
 <label className="font-label-xs text-label-xs font-semibold text-secondary uppercase tracking-wider block mb-1">Custom Analytics CNAME Host</label>
 <div className="flex items-center gap-2">
-<input className="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm focus:outline-none" type="text" value="seo.stripe.corp"/>
+<input className="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm focus:outline-none" type="text" defaultValue="seo.stripe.corp"/>
 <span className="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold shrink-0">CNAME Valid</span>
 </div>
 </div>

@@ -145,13 +145,13 @@ export function ContactMarketingContent() {
 </label>
 <div className="relative">
 <select className="w-full h-11 px-space-md bg-surface-container-low text-jet-black font-body-md text-body-md rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="contact-reason" required>
-<option disabled value="">Select an inquiry domain...</option>
-<option value="general">General Question / Orientation</option>
-<option value="product">Product Support &amp; Technical Debugging</option>
-<option value="sales">Sales, Multi-Site &amp; Enterprise Tiers</option>
-<option value="partnership">Partnership, Co-Marketing, Agency Reseller</option>
-<option value="billing">Invoicing &amp; Billing Inquiries</option>
-<option value="bug">Bug Report / Spider Pipeline Anomaly</option>
+<option disabled defaultValue="">Select an inquiry domain...</option>
+<option defaultValue="general">General Question / Orientation</option>
+<option defaultValue="product">Product Support &amp; Technical Debugging</option>
+<option defaultValue="sales">Sales, Multi-Site &amp; Enterprise Tiers</option>
+<option defaultValue="partnership">Partnership, Co-Marketing, Agency Reseller</option>
+<option defaultValue="billing">Invoicing &amp; Billing Inquiries</option>
+<option defaultValue="bug">Bug Report / Spider Pipeline Anomaly</option>
 </select>
 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-md text-dusk-blue">
 <span className="material-symbols-outlined text-[20px]">expand_more</span>

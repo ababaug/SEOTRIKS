@@ -14,7 +14,7 @@ export function ReportBuilderContent() {
 </div>
 <div className="min-w-0">
 <div className="flex items-center gap-space-xs">
-<input className="font-headline-sm text-headline-sm font-bold text-on-surface bg-transparent hover:bg-surface-container-low px-1.5 py-0.5 rounded focus:bg-surface-container-lowest focus:outline-none transition-colors truncate max-w-xl" type="text" value="Stripe Q1 Enterprise Organic Performance &amp; Competitor Benchmark"/>
+<input className="font-headline-sm text-headline-sm font-bold text-on-surface bg-transparent hover:bg-surface-container-low px-1.5 py-0.5 rounded focus:bg-surface-container-lowest focus:outline-none transition-colors truncate max-w-xl" type="text" defaultValue="Stripe Q1 Enterprise Organic Performance &amp; Competitor Benchmark"/>
 <span className="material-symbols-outlined text-secondary text-sm cursor-pointer hover:text-on-surface">edit</span>
 </div>
 <div className="flex items-center gap-space-xs text-secondary font-label-xs text-label-xs mt-0.5">

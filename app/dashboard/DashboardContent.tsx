@@ -1,4 +1,6 @@
-export function DashboardContent() {
+
+export function DashboardContent({ metrics = { projectCount: 0, keywordCount: 0, avgHealth: 0 } }: { metrics?: { projectCount: number, keywordCount: number, avgHealth: number } }) {
+
   return (
 <main className="w-full pt-16 px-gutter-lg pb-margin-lg bg-background min-h-screen">
 <div className="flex flex-col w-full gap-y-space-lg">

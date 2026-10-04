@@ -31,7 +31,7 @@ export function KeywordResearchContent() {
 <div className="flex flex-col lg:flex-row items-stretch gap-space-sm">
 <div className="relative flex-[2] flex items-center bg-surface-container-low rounded-xl px-space-md focus-within:ring-2 focus-within:ring-secondary-container focus-within:bg-surface-container-lowest transition-all">
 <span className="material-symbols-outlined text-secondary text-[22px] mr-2.5">search_insights</span>
-<input className="w-full py-3 bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="seedInput" placeholder="Enter root seeds, competitors, or boolean operators (e.g. checkout AND global)..." type="text" value="payment gateway api, merchant payment processing"/>
+<input className="w-full py-3 bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="seedInput" placeholder="Enter root seeds, competitors, or boolean operators (e.g. checkout AND global)..." type="text" defaultValue="payment gateway api, merchant payment processing"/>
 <button className="p-1 rounded-lg text-secondary hover:text-on-surface transition-colors" onClick={() => {}}>
 <span className="material-symbols-outlined text-[18px]">close</span>
 </button>
@@ -40,30 +40,30 @@ export function KeywordResearchContent() {
 <div className="relative flex items-center bg-surface-container-low rounded-xl px-3 py-2.5">
 <span className="material-symbols-outlined text-secondary text-[18px] mr-1.5">public</span>
 <select className="w-full bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none appearance-none cursor-pointer pr-4">
-<option value="us">United States 🇺🇸</option>
-<option value="gb">United Kingdom 🇬🇧</option>
-<option value="global">Global Markets 🌍</option>
-<option value="eu">European Union 🇪🇺</option>
-<option value="sg">Singapore 🇸🇬</option>
+<option defaultValue="us">United States 🇺🇸</option>
+<option defaultValue="gb">United Kingdom 🇬🇧</option>
+<option defaultValue="global">Global Markets 🌍</option>
+<option defaultValue="eu">European Union 🇪🇺</option>
+<option defaultValue="sg">Singapore 🇸🇬</option>
 </select>
 <span className="material-symbols-outlined absolute right-2 pointer-events-none text-secondary text-sm">expand_more</span>
 </div>
 <div className="relative flex items-center bg-surface-container-low rounded-xl px-3 py-2.5">
 <span className="material-symbols-outlined text-secondary text-[18px] mr-1.5">travel_explore</span>
 <select className="w-full bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none appearance-none cursor-pointer pr-4">
-<option value="google">Google Mobile + Web</option>
-<option value="bing">Bing Search</option>
-<option value="youtube">YouTube Engine</option>
-<option value="amazon">Amazon Product Search</option>
+<option defaultValue="google">Google Mobile + Web</option>
+<option defaultValue="bing">Bing Search</option>
+<option defaultValue="youtube">YouTube Engine</option>
+<option defaultValue="amazon">Amazon Product Search</option>
 </select>
 <span className="material-symbols-outlined absolute right-2 pointer-events-none text-secondary text-sm">expand_more</span>
 </div>
 <div className="relative col-span-2 sm:col-span-1 flex items-center bg-surface-container-low rounded-xl px-3 py-2.5">
 <span className="material-symbols-outlined text-secondary text-[18px] mr-1.5">device_hub</span>
 <select className="w-full bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none appearance-none cursor-pointer pr-4">
-<option value="all">Desktop &amp; Mobile</option>
-<option value="desktop">Desktop Only</option>
-<option value="mobile">Mobile First</option>
+<option defaultValue="all">Desktop &amp; Mobile</option>
+<option defaultValue="desktop">Desktop Only</option>
+<option defaultValue="mobile">Mobile First</option>
 </select>
 <span className="material-symbols-outlined absolute right-2 pointer-events-none text-secondary text-sm">expand_more</span>
 </div>

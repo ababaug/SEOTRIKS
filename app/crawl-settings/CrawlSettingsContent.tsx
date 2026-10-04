@@ -146,7 +146,7 @@ export function CrawlSettingsContent() {
 <label className="font-label-xs text-label-xs text-secondary font-bold uppercase tracking-wider">Target Resource URL</label>
 <div className="relative flex items-center">
 <span className="material-symbols-outlined absolute left-3 text-secondary text-[18px]">link</span>
-<input className="w-full pl-9 pr-4 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" id="sim-url" type="text" value="https://stripe.com/payments/checkout"/>
+<input className="w-full pl-9 pr-4 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" id="sim-url" type="text" defaultValue="https://stripe.com/payments/checkout"/>
 </div>
 </div>
 {/*  Bot User-Agent Dropdown  */}
@@ -155,11 +155,11 @@ export function CrawlSettingsContent() {
 <div className="relative flex items-center">
 <span className="material-symbols-outlined absolute left-3 text-secondary text-[18px]">smart_toy</span>
 <select className="w-full pl-9 pr-8 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container cursor-pointer transition-all" id="sim-agent">
-<option defaultChecked value="googlebot-mobile">Googlebot Smartphone (Chrome 124, Android)</option>
-<option value="googlebot-desktop">Googlebot Desktop (Chrome 124, macOS)</option>
-<option value="bingbot">Bingbot 2.0 (Desktop Windows)</option>
-<option value="seotriks-agent">SEOTRIKS Crawler v4.2</option>
-<option value="custom">Custom Specified Agent Token</option>
+<option defaultChecked defaultValue="googlebot-mobile">Googlebot Smartphone (Chrome 124, Android)</option>
+<option defaultValue="googlebot-desktop">Googlebot Desktop (Chrome 124, macOS)</option>
+<option defaultValue="bingbot">Bingbot 2.0 (Desktop Windows)</option>
+<option defaultValue="seotriks-agent">SEOTRIKS Crawler v4.2</option>
+<option defaultValue="custom">Custom Specified Agent Token</option>
 </select>
 <span className="material-symbols-outlined absolute right-3 text-secondary text-[18px] pointer-events-none">expand_more</span>
 </div>
@@ -170,9 +170,9 @@ export function CrawlSettingsContent() {
 <div className="relative flex items-center">
 <span className="material-symbols-outlined absolute left-3 text-secondary text-[18px]">devices</span>
 <select className="w-full pl-9 pr-8 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container cursor-pointer transition-all" id="sim-viewport">
-<option defaultChecked value="mobile">Mobile 390 × 844 (dpr: 3)</option>
-<option value="desktop">Desktop 1920 × 1080 (dpr: 1)</option>
-<option value="tablet">Tablet 820 × 1180 (dpr: 2)</option>
+<option defaultChecked defaultValue="mobile">Mobile 390 × 844 (dpr: 3)</option>
+<option defaultValue="desktop">Desktop 1920 × 1080 (dpr: 1)</option>
+<option defaultValue="tablet">Tablet 820 × 1180 (dpr: 2)</option>
 </select>
 <span className="material-symbols-outlined absolute right-3 text-secondary text-[18px] pointer-events-none">expand_more</span>
 </div>
@@ -198,15 +198,15 @@ export function CrawlSettingsContent() {
 <div className="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs" id="http-headers-drawer">
 <div className="flex flex-col gap-1 bg-surface-container-lowest p-2.5 rounded-lg">
 <span className="font-label-xs text-label-xs text-secondary font-mono">Accept-Language</span>
-<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none" type="text" value="en-US,en;q=0.9"/>
+<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none" type="text" defaultValue="en-US,en;q=0.9"/>
 </div>
 <div className="flex flex-col gap-1 bg-surface-container-lowest p-2.5 rounded-lg">
 <span className="font-label-xs text-label-xs text-secondary font-mono">Cookie (Session Preview)</span>
-<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none truncate" type="text" value="__stripe_orig_ref=googlebot_test; ab_variant=v3"/>
+<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none truncate" type="text" defaultValue="__stripe_orig_ref=googlebot_test; ab_variant=v3"/>
 </div>
 <div className="flex flex-col gap-1 bg-surface-container-lowest p-2.5 rounded-lg">
 <span className="font-label-xs text-label-xs text-secondary font-mono">Authorization / Bypass Token</span>
-<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none" type="password" value="Bearer stk_sim_live_89104fa2"/>
+<input className="font-body-sm text-body-sm text-on-surface bg-transparent focus:outline-none" type="password" defaultValue="Bearer stk_sim_live_89104fa2"/>
 </div>
 </div>
 </div>
@@ -413,7 +413,7 @@ export function CrawlSettingsContent() {
         &lt;div id="interactive-mount"&gt;
           &lt;!-- [DOM Injection Diff] Client runtime loaded form elements --&gt;
           &lt;form action="/api/checkout/session" method="POST"&gt;
-            &lt;input name="locale" value="en-US" type="hidden"&gt;
+            &lt;input name="locale" defaultValue="en-US" type="hidden"&gt;
             &lt;button type="submit"&gt;Pay $120.00&lt;/button&gt;
           &lt;/form&gt;
         &lt;/div&gt;

@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaClient } from "@prisma/client"
+import bcrypt from "bcryptjs"
 
 const prisma = new PrismaClient()
 
@@ -17,14 +18,17 @@ const authOptions = {
           return null
         }
 
-        // In a real app, you would hash the password and compare it.
-        // For this implementation, we are just mocking a simple login
-        // for any user in the DB if they provide 'password' as the password.
         const user = await prisma.user.findUnique({
           where: { email: credentials.email }
         })
 
-        if (user && credentials.password === 'password') {
+        if (!user || !user.password) {
+          return null
+        }
+
+        const passwordsMatch = await bcrypt.compare(credentials.password, user.password)
+
+        if (passwordsMatch) {
           return { id: user.id, name: user.name, email: user.email, role: user.role }
         } else {
           return null

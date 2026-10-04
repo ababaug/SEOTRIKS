@@ -132,30 +132,30 @@ export function ProjectsHubContent({ projects = [] }: { projects: any[] }) {
 {/*  Workspace Select Dropdown  */}
 <div className="relative">
 <select className="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-3.5 py-2 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary-container cursor-pointer" id="workspaceSelect" onChange={() => {}}>
-<option value="all">All Workspaces (3)</option>
-<option value="Enterprise Tier 1">Workspace: Enterprise Tier 1</option>
-<option value="SaaS Growth Labs">Workspace: SaaS Growth Labs</option>
-<option value="Internal Products">Workspace: Internal Products</option>
+<option defaultValue="all">All Workspaces (3)</option>
+<option defaultValue="Enterprise Tier 1">Workspace: Enterprise Tier 1</option>
+<option defaultValue="SaaS Growth Labs">Workspace: SaaS Growth Labs</option>
+<option defaultValue="Internal Products">Workspace: Internal Products</option>
 </select>
 <span className="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">expand_more</span>
 </div>
 {/*  Health Filter  */}
 <div className="relative">
 <select className="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-3.5 py-2 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary-container cursor-pointer" id="healthSelect" onChange={() => {}}>
-<option value="all">Health: All</option>
-<option value="high">Health: 90+ (Optimal)</option>
-<option value="medium">Health: 70-89 (Fair)</option>
-<option value="low">Health: &lt; 70 (Critical)</option>
+<option defaultValue="all">Health: All</option>
+<option defaultValue="high">Health: 90+ (Optimal)</option>
+<option defaultValue="medium">Health: 70-89 (Fair)</option>
+<option defaultValue="low">Health: &lt; 70 (Critical)</option>
 </select>
 <span className="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">tune</span>
 </div>
 {/*  Crawl Status Filter  */}
 <div className="relative">
 <select className="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-3.5 py-2 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary-container cursor-pointer" id="statusSelect" onChange={() => {}}>
-<option value="all">Status: Any</option>
-<option value="Active">Active</option>
-<option value="Crawling">Crawling</option>
-<option value="Paused">Paused</option>
+<option defaultValue="all">Status: Any</option>
+<option defaultValue="Active">Active</option>
+<option defaultValue="Crawling">Crawling</option>
+<option defaultValue="Paused">Paused</option>
 </select>
 <span className="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">sync</span>
 </div>
@@ -749,9 +749,9 @@ export function ProjectsHubContent({ projects = [] }: { projects: any[] }) {
 <div>
 <label className="block font-label-md text-label-md text-on-surface font-semibold mb-1">Assign Workspace</label>
 <select className="w-full px-3 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-container" id="inputWorkspace">
-<option value="Enterprise Tier 1">Enterprise Tier 1</option>
-<option value="SaaS Growth Labs">SaaS Growth Labs</option>
-<option value="Internal Products">Internal Products</option>
+<option defaultValue="Enterprise Tier 1">Enterprise Tier 1</option>
+<option defaultValue="SaaS Growth Labs">SaaS Growth Labs</option>
+<option defaultValue="Internal Products">Internal Products</option>
 </select>
 </div>
 <div>

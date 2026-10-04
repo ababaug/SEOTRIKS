@@ -1,3 +1,4 @@
+"use client";
 
 export function ProjectsContent({ projects = [] }: { projects: any[] }) {
 

@@ -456,7 +456,7 @@ export function EdgeRulesContent() {
 <label className="font-label-xs text-label-xs text-secondary font-bold uppercase">Target Ingress URI</label>
 <div className="flex items-center">
 <span className="bg-surface-container px-3 py-2 rounded-l-lg font-mono text-body-sm text-secondary">https://stripe.com</span>
-<input className="w-full p-2 bg-surface-container-lowest rounded-r-lg font-mono text-body-sm text-on-surface focus:outline-none" type="text" value="/docs/checkout/v3/payments?session_id=usr_991823&amp;ref=affiliate"/>
+<input className="w-full p-2 bg-surface-container-lowest rounded-r-lg font-mono text-body-sm text-on-surface focus:outline-none" type="text" defaultValue="/docs/checkout/v3/payments?session_id=usr_991823&amp;ref=affiliate"/>
 </div>
 </div>
 </div>
@@ -473,7 +473,7 @@ export function EdgeRulesContent() {
 <div className="flex flex-col gap-1">
 <label className="font-label-xs text-label-xs text-secondary font-bold uppercase">Client IP / AS Network</label>
 <div className="flex items-center">
-<input className="w-full p-2 bg-surface-container-low rounded-lg font-mono text-body-sm text-on-surface focus:outline-none" type="text" value="66.249.66.1 (Google LLC - AS15169)"/>
+<input className="w-full p-2 bg-surface-container-low rounded-lg font-mono text-body-sm text-on-surface focus:outline-none" type="text" defaultValue="66.249.66.1 (Google LLC - AS15169)"/>
 </div>
 </div>
 </div>
