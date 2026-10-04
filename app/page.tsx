@@ -363,7 +363,7 @@ export default function Page() {
 
 <line stroke="#ee6c4d" strokeDasharray="2 2" strokeWidth="1.5" x1="90" x2="90" y1="10" y2="55"></line>
 <circle cx="90" cy="42" fill="#ee6c4d" r="3"></circle>
-<text fill="#ee6c4d" font-family="Manrope" font-size="9" font-weight="bold" x="95" y="20">DEPLOY</text>
+<text fill="#ee6c4d" fontFamily="Manrope" fontSize="9" fontWeight="bold" x="95" y="20">DEPLOY</text>
 
 <path d="M 90 42 C 140 38, 190 12, 280 6" stroke="#3d5a80" strokeLinecap="round" strokeWidth="3"></path>
 </svg>
