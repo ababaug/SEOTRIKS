@@ -1,5 +1,7 @@
 "use client";
-export function ProjectsHubContent() {
+
+export function ProjectsHubContent({ projects = [] }: { projects: any[] }) {
+
   return (
 <main className="w-full pt-16 px-gutter-lg pb-margin-lg bg-background min-h-screen">
 <div className="flex flex-col w-full pb-16">
@@ -655,254 +657,47 @@ export function ProjectsHubContent() {
 </tr>
 </thead>
 <tbody className="font-body-md text-body-md divide-y divide-surface-container" id="projectsTableBody">
-{/*  Row 1: Stripe  */}
-<tr className="hover:bg-surface-container-low/60 transition-colors group" data-domain="stripe.com" data-health="94" data-status="Active" data-traffic="38200000" data-workspace="Enterprise Tier 1">
-<td className="py-3.5 px-4 text-center">
-<input className="project-checkbox rounded w-4 h-4 text-secondary focus:ring-0 cursor-pointer" onChange={() => {}} type="checkbox"/>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-3">
-<div className="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary font-bold">
-                  S
-                </div>
-<div>
-<div className="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
-                    stripe.com
-                    <span className="material-symbols-outlined text-secondary text-sm">verified</span>
-</div>
-<span className="font-body-sm text-body-sm text-secondary">Stripe Production</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-on-surface font-medium">Enterprise Tier 1</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-tertiary"></span>
-<span className="font-label-md text-label-md text-on-surface font-medium">Active</span>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-bold inline-flex items-center gap-1">
-                94
-              </span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              38.2M
-              <span className="text-tertiary text-xs block font-normal">+8.2%</span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              54,120
-            </td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-secondary font-medium">18 issues</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center -space-x-1.5">
-<div className="w-6 h-6 rounded-full bg-secondary text-on-secondary text-label-xs flex items-center justify-center">JD</div>
-<div className="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary text-label-xs flex items-center justify-center">+3</div>
-</div>
-</td>
-<td className="py-3.5 px-4 text-right">
-<div className="flex items-center justify-end gap-1">
-<button className="p-1 rounded text-secondary hover:text-primary-container" onClick={() => {}} title="Instant Audit">
-<span className="material-symbols-outlined text-[18px]">speed</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Export PDF">
-<span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Settings">
-<span className="material-symbols-outlined text-[18px]">settings</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 2: Shopify  */}
-<tr className="hover:bg-surface-container-low/60 transition-colors group" data-domain="shopify.com" data-health="89" data-status="Crawling" data-traffic="29400000" data-workspace="Enterprise Tier 1">
-<td className="py-3.5 px-4 text-center">
-<input className="project-checkbox rounded w-4 h-4 text-secondary focus:ring-0 cursor-pointer" onChange={() => {}} type="checkbox"/>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-3">
-<div className="w-9 h-9 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary font-bold">
-                  SH
-                </div>
-<div>
-<div className="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
-                    shopify.com
-                  </div>
-<span className="font-body-sm text-body-sm text-secondary">Shopify Global</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-on-surface font-medium">Enterprise Tier 1</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-1.5">
-<span className="material-symbols-outlined text-primary-container text-sm animate-spin">refresh</span>
-<span className="font-label-md text-label-md text-primary-container font-medium">Crawling</span>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold inline-flex items-center gap-1">
-                89
-              </span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              29.4M
-              <span className="text-tertiary text-xs block font-normal">+3.4%</span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              41,890
-            </td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-primary-fixed/60 font-label-xs text-label-xs text-on-primary-fixed-variant font-medium">34 issues</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center -space-x-1.5">
-<div className="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-xs flex items-center justify-center">SR</div>
-</div>
-</td>
-<td className="py-3.5 px-4 text-right">
-<div className="flex items-center justify-end gap-1">
-<button className="p-1 rounded text-secondary hover:text-primary-container" onClick={() => {}} title="Instant Audit">
-<span className="material-symbols-outlined text-[18px]">speed</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Export PDF">
-<span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Settings">
-<span className="material-symbols-outlined text-[18px]">settings</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 3: Figma  */}
-<tr className="hover:bg-surface-container-low/60 transition-colors group" data-domain="figma.com" data-health="97" data-status="Active" data-traffic="12800000" data-workspace="SaaS Growth Labs">
-<td className="py-3.5 px-4 text-center">
-<input className="project-checkbox rounded w-4 h-4 text-secondary focus:ring-0 cursor-pointer" onChange={() => {}} type="checkbox"/>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-3">
-<div className="w-9 h-9 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary font-bold">
-                  F
-                </div>
-<div>
-<div className="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
-                    figma.com
-                  </div>
-<span className="font-body-sm text-body-sm text-secondary">Figma Collaboration</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-on-surface font-medium">SaaS Growth Labs</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-tertiary"></span>
-<span className="font-label-md text-label-md text-on-surface font-medium">Active</span>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md font-bold inline-flex items-center gap-1">
-                97
-              </span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              12.8M
-              <span className="text-tertiary text-xs block font-normal">+19.4%</span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              18,340
-            </td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-secondary font-medium">4 issues</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center -space-x-1.5">
-<div className="w-6 h-6 rounded-full bg-secondary text-on-secondary text-label-xs flex items-center justify-center">EK</div>
-<div className="w-6 h-6 rounded-full bg-tertiary text-on-tertiary text-label-xs flex items-center justify-center">AM</div>
-</div>
-</td>
-<td className="py-3.5 px-4 text-right">
-<div className="flex items-center justify-end gap-1">
-<button className="p-1 rounded text-secondary hover:text-primary-container" onClick={() => {}} title="Instant Audit">
-<span className="material-symbols-outlined text-[18px]">speed</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Export PDF">
-<span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Settings">
-<span className="material-symbols-outlined text-[18px]">settings</span>
-</button>
-</div>
-</td>
-</tr>
-{/*  Row 4: Linear  */}
-<tr className="hover:bg-surface-container-low/60 transition-colors group" data-domain="linear.app" data-health="68" data-status="Paused" data-traffic="3800000" data-workspace="SaaS Growth Labs">
-<td className="py-3.5 px-4 text-center">
-<input className="project-checkbox rounded w-4 h-4 text-secondary focus:ring-0 cursor-pointer" onChange={() => {}} type="checkbox"/>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-3">
-<div className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-bold">
-                  L
-                </div>
-<div>
-<div className="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
-                    linear.app
-                  </div>
-<span className="font-body-sm text-body-sm text-secondary">Linear Method</span>
-</div>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-on-surface font-medium">SaaS Growth Labs</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center gap-1.5">
-<span className="w-2 h-2 rounded-full bg-error"></span>
-<span className="font-label-md text-label-md text-error font-medium">Paused</span>
-</div>
-</td>
-<td className="py-3.5 px-4">
-<span className="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold inline-flex items-center gap-1">
-                68
-              </span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              3.8M
-              <span className="text-error text-xs block font-normal">-4.1%</span>
-</td>
-<td className="py-3.5 px-4 font-label-md text-label-md text-on-surface font-semibold">
-              4,140
-            </td>
-<td className="py-3.5 px-4">
-<span className="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs font-medium">72 issues</span>
-</td>
-<td className="py-3.5 px-4">
-<div className="flex items-center -space-x-1.5">
-<div className="w-6 h-6 rounded-full bg-secondary text-on-secondary text-label-xs flex items-center justify-center">JP</div>
-</div>
-</td>
-<td className="py-3.5 px-4 text-right">
-<div className="flex items-center justify-end gap-1">
-<button className="p-1 rounded text-secondary hover:text-primary-container" onClick={() => {}} title="Instant Audit">
-<span className="material-symbols-outlined text-[18px]">speed</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Export PDF">
-<span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
-</button>
-<button className="p-1 rounded text-secondary hover:text-on-surface" onClick={() => {}} title="Settings">
-<span className="material-symbols-outlined text-[18px]">settings</span>
-</button>
-</div>
-</td>
-</tr>
-</tbody>
+              {projects.length === 0 ? (
+                <tr>
+                  <td colSpan={6} className="px-space-sm py-8 text-center text-on-surface-variant font-body-sm text-body-sm">
+                    No projects found.
+                  </td>
+                </tr>
+              ) : (
+                projects.map((project) => (
+                  <tr key={project.id} className="border-b border-surface-container-highest hover:bg-surface-container-low transition-colors group">
+                    <td className="px-space-sm py-3 text-left">
+                      <div className="flex items-center gap-space-sm">
+                        <div className="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+                          <span className="material-symbols-outlined text-[18px]">public</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">{project.name}</span>
+                          <span className="font-mono-code text-mono-code text-on-surface-variant text-[10px] mt-0.5">{project.domain}</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-left">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-md text-[11px] font-semibold w-fit">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Active Tracking
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-right font-mono-code text-mono-code text-on-surface">1,492</td>
+                    <td className="px-space-sm py-3 text-right font-mono-code text-mono-code text-on-surface">340</td>
+                    <td className="px-space-sm py-3 text-right">
+                      <div className="flex items-center justify-end gap-1.5 text-secondary font-mono-code text-mono-code text-[11px]">
+                        <span className="material-symbols-outlined text-[14px]">arrow_upward</span>85
+                      </div>
+                    </td>
+                    <td className="px-space-sm py-3 text-right">
+                      <button className="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Manage Project">
+                        <span className="material-symbols-outlined text-[18px]">more_vert</span>
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+              </tbody>
 </table>
 </div>
 </div>
