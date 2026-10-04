@@ -15,6 +15,7 @@ model Organization {
   updatedAt   DateTime  @updatedAt
 
   users       User[]
+  roles       Role[]
   projects    Project[]
 }
 
@@ -107,4 +108,27 @@ model AuditLog {
   timestamp  DateTime @default(now())
 
   user       User     @relation(fields: [userId], references: [id])
+}
+
+model Role {
+  id             String       @id @default(uuid())
+  name           String
+  description    String?
+  organizationId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  permissions    RolePermission[]
+}
+
+model RolePermission {
+  id        String   @id @default(uuid())
+  roleId    String
+  resource  String   // e.g. "PROJECTS", "USERS", "BILLING"
+  action    String   // e.g. "CREATE", "READ", "UPDATE", "DELETE"
+
+  role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([roleId, resource, action])
 }
