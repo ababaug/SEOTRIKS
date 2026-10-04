@@ -89,7 +89,7 @@ model Report {
   id        String   @id @default(uuid())
   title     String
   type      String
-  config    Json
+  config    String
   projectId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -103,7 +103,7 @@ model AuditLog {
   entityType String
   entityId   String
   userId     String
-  details    Json?
+  details    String?
   timestamp  DateTime @default(now())
 
   user       User     @relation(fields: [userId], references: [id])
