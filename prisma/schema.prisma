@@ -46,6 +46,7 @@ model Project {
   keywords       Keyword[]
   backlinks      Backlink[]
   siteAudits     SiteAudit[]
+  pageStatuses   PageStatus[]
   reports        Report[]
 }
 
@@ -147,4 +148,19 @@ model BlogPost {
   updatedAt   DateTime @updatedAt
 
   author      User     @relation(fields: [authorId], references: [id])
+}
+
+model PageStatus {
+  id             String   @id @default(uuid())
+  url            String   @unique
+  title          String?
+  healthScore    Int      @default(100)
+  organicTraffic Int      @default(0)
+  keywordCount   Int      @default(0)
+  issues         Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
 }

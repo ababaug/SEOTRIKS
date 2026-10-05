@@ -115,3 +115,28 @@ export async function createBlogPost(formData: FormData) {
 
   revalidatePath('/blog-full')
 }
+
+export async function createPageStatus(formData: FormData) {
+  await getSessionOrThrow()
+  const url = formData.get('url') as string
+  const title = formData.get('title') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!url || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.pageStatus.create({
+    data: {
+      url,
+      title,
+      projectId,
+      healthScore: Math.floor(Math.random() * 40) + 60,
+      organicTraffic: Math.floor(Math.random() * 5000),
+      keywordCount: Math.floor(Math.random() * 200),
+      issues: Math.floor(Math.random() * 10)
+    }
+  })
+
+  revalidatePath('/page-explorer')
+}
