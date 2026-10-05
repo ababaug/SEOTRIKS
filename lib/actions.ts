@@ -162,3 +162,27 @@ export async function createContentOpportunity(formData: FormData) {
 
   revalidatePath('/content-opps')
 }
+
+export async function createWebhook(formData: FormData) {
+  await getSessionOrThrow()
+  const name = formData.get('name') as string
+  const url = formData.get('url') as string
+  const events = formData.get('events') as string || '[]'
+  const projectId = formData.get('projectId') as string
+
+  if (!name || !url || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.webhook.create({
+    data: {
+      name,
+      url,
+      events,
+      projectId,
+      secret: "whsec_" + Math.random().toString(36).substring(2, 15)
+    }
+  })
+
+  revalidatePath('/webhooks')
+}

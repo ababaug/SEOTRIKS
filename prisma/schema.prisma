@@ -50,6 +50,7 @@ model Project {
   reports        Report[]
   contentOpps    ContentOpportunity[]
   coreWebVitals  CoreWebVital[]
+  webhooks       Webhook[]
 }
 
 model Keyword {
@@ -191,4 +192,18 @@ model CoreWebVital {
   measuredAt       DateTime @default(now())
 
   project          Project  @relation(fields: [projectId], references: [id])
+}
+
+model Webhook {
+  id             String   @id @default(uuid())
+  name           String
+  url            String
+  events         String   // Stored as JSON or comma-separated string
+  status         String   @default("ACTIVE")
+  secret         String?
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
 }
