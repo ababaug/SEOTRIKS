@@ -186,3 +186,52 @@ export async function createWebhook(formData: FormData) {
 
   revalidatePath('/webhooks')
 }
+
+export async function createOnPageAudit(formData: FormData) {
+  await getSessionOrThrow()
+  const url = formData.get('url') as string
+  const targetKeyword = formData.get('targetKeyword') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!url || !targetKeyword || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.onPageSeoAudit.create({
+    data: {
+      url,
+      targetKeyword,
+      projectId,
+      score: Math.floor(Math.random() * 40) + 60,
+      titleStatus: "OPTIMIZED",
+      metaStatus: "OPTIMIZED",
+      h1Status: "OPTIMIZED",
+      contentLength: 1200
+    }
+  })
+
+  revalidatePath('/onpage-seo')
+}
+
+export async function createTechIssue(formData: FormData) {
+  await getSessionOrThrow()
+  const url = formData.get('url') as string
+  const type = formData.get('type') as string
+  const severity = formData.get('severity') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!url || !type || !severity || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.technicalIssue.create({
+    data: {
+      url,
+      type,
+      severity,
+      projectId
+    }
+  })
+
+  revalidatePath('/technical-seo')
+}

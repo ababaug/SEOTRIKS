@@ -2,3 +2,5 @@ node_modules/
 .next/
 .env
 *.db
+.next/
+node_modules/

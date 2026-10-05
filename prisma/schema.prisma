@@ -51,6 +51,8 @@ model Project {
   contentOpps    ContentOpportunity[]
   coreWebVitals  CoreWebVital[]
   webhooks       Webhook[]
+  onPageAudits   OnPageSeoAudit[]
+  techIssues     TechnicalIssue[]
 }
 
 model Keyword {
@@ -201,6 +203,35 @@ model Webhook {
   events         String   // Stored as JSON or comma-separated string
   status         String   @default("ACTIVE")
   secret         String?
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model OnPageSeoAudit {
+  id             String   @id @default(uuid())
+  url            String
+  targetKeyword  String
+  score          Int      @default(0)
+  titleStatus    String   @default("MISSING")
+  metaStatus     String   @default("MISSING")
+  h1Status       String   @default("MISSING")
+  contentLength  Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model TechnicalIssue {
+  id             String   @id @default(uuid())
+  type           String   // e.g. "404", "500", "REDIRECT_CHAIN"
+  severity       String   // e.g. "HIGH", "MEDIUM", "LOW"
+  url            String
+  status         String   @default("OPEN")
   projectId      String
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
