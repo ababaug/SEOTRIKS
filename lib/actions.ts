@@ -140,3 +140,25 @@ export async function createPageStatus(formData: FormData) {
 
   revalidatePath('/page-explorer')
 }
+
+export async function createContentOpportunity(formData: FormData) {
+  await getSessionOrThrow()
+  const topic = formData.get('topic') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!topic || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.contentOpportunity.create({
+    data: {
+      topic,
+      projectId,
+      searchVolume: Math.floor(Math.random() * 10000),
+      difficulty: Math.floor(Math.random() * 100),
+      relevanceScore: Math.random() * 10
+    }
+  })
+
+  revalidatePath('/content-opps')
+}
