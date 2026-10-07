@@ -1,14 +1,2 @@
-node_modules/
-.next/
-.env
-*.db
-.next/
-node_modules/
-.next/
-node_modules/
-.next/
-node_modules/
-node_modules/
-.next/
-.next/
-node_modules/
+.next
+node_modules
