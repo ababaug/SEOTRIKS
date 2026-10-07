@@ -235,3 +235,52 @@ export async function createTechIssue(formData: FormData) {
 
   revalidatePath('/technical-seo')
 }
+
+export async function createEdgeRule(formData: FormData) {
+  await getSessionOrThrow()
+  const name = formData.get('name') as string
+  const pattern = formData.get('pattern') as string
+  const action = formData.get('action') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!name || !pattern || !action || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.edgeRule.create({
+    data: {
+      name,
+      pattern,
+      action,
+      projectId
+    }
+  })
+
+  revalidatePath('/edge-manager')
+}
+
+export async function setupJiraIntegration(formData: FormData) {
+  await getSessionOrThrow()
+  const domain = formData.get('domain') as string
+  const projectKey = formData.get('projectKey') as string
+  const projectId = formData.get('projectId') as string
+
+  if (!domain || !projectKey || !projectId) {
+    throw new Error('Missing required fields')
+  }
+
+  await prisma.jiraIntegration.upsert({
+    where: { projectId },
+    update: {
+      domain,
+      projectKey,
+    },
+    create: {
+      domain,
+      projectKey,
+      projectId
+    }
+  })
+
+  revalidatePath('/jira-modal')
+}

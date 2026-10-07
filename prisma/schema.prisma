@@ -53,6 +53,8 @@ model Project {
   webhooks       Webhook[]
   onPageAudits   OnPageSeoAudit[]
   techIssues     TechnicalIssue[]
+  edgeRules      EdgeRule[]
+  jiraSettings   JiraIntegration?
 }
 
 model Keyword {
@@ -233,6 +235,33 @@ model TechnicalIssue {
   url            String
   status         String   @default("OPEN")
   projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model EdgeRule {
+  id             String   @id @default(uuid())
+  name           String
+  pattern        String
+  action         String
+  status         String   @default("ACTIVE")
+  priority       Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model JiraIntegration {
+  id             String   @id @default(uuid())
+  domain         String
+  projectKey     String
+  issueType      String   @default("Task")
+  autoCreate     Boolean  @default(false)
+  projectId      String   @unique
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
