@@ -1,4 +1,4 @@
-import { Header } from "../Header";
+import { Header } from "@/app/components/Header";
 export const metadata = { title: "SEO Tools & Website Optimization Features | SEOtriks", description: "Explore SEOtriks tools for technical SEO audits, AI recommendations, SEO monitoring, content optimization, search performance, reporting and more." };
 import { FaqItem } from "../FaqItem";
 

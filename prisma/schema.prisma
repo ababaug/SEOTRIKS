@@ -1,0 +1,269 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id          String    @id @default(uuid())
+  name        String
+  billingPlan String    @default("FREE")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  users       User[]
+  roles       Role[]
+  projects    Project[]
+}
+
+model User {
+  id             String        @id @default(uuid())
+  email          String        @unique
+  name           String?
+  password       String?
+  role           String        @default("MEMBER")
+  organizationId String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  organization   Organization? @relation(fields: [organizationId], references: [id])
+  auditLogs      AuditLog[]
+  posts          BlogPost[]
+}
+
+model Project {
+  id             String       @id @default(uuid())
+  name           String
+  domain         String
+  organizationId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  keywords       Keyword[]
+  backlinks      Backlink[]
+  siteAudits     SiteAudit[]
+  pageStatuses   PageStatus[]
+  reports        Report[]
+  contentOpps    ContentOpportunity[]
+  coreWebVitals  CoreWebVital[]
+  webhooks       Webhook[]
+  onPageAudits   OnPageSeoAudit[]
+  techIssues     TechnicalIssue[]
+  edgeRules      EdgeRule[]
+  jiraSettings   JiraIntegration?
+}
+
+model Keyword {
+  id          String   @id @default(uuid())
+  term        String
+  volume      Int?
+  difficulty  Int?
+  currentRank Int?
+  projectId   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project     Project  @relation(fields: [projectId], references: [id])
+}
+
+model SiteAudit {
+  id           String    @id @default(uuid())
+  healthScore  Float?
+  pagesCrawled Int       @default(0)
+  issuesFound  Int       @default(0)
+  status       String    @default("PENDING")
+  projectId    String
+  startedAt    DateTime  @default(now())
+  completedAt  DateTime?
+
+  project      Project   @relation(fields: [projectId], references: [id])
+}
+
+model Backlink {
+  id              String   @id @default(uuid())
+  url             String
+  domainAuthority Int?
+  anchorText      String?
+  status          String   @default("ACTIVE")
+  projectId       String
+  discoveredAt    DateTime @default(now())
+
+  project         Project  @relation(fields: [projectId], references: [id])
+}
+
+model Report {
+  id        String   @id @default(uuid())
+  title     String
+  type      String
+  config    String
+  projectId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project   Project  @relation(fields: [projectId], references: [id])
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  action     String
+  entityType String
+  entityId   String
+  userId     String
+  details    String?
+  timestamp  DateTime @default(now())
+
+  user       User     @relation(fields: [userId], references: [id])
+}
+
+model Role {
+  id             String       @id @default(uuid())
+  name           String
+  description    String?
+  organizationId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  permissions    RolePermission[]
+}
+
+model RolePermission {
+  id        String   @id @default(uuid())
+  roleId    String
+  resource  String   // e.g. "PROJECTS", "USERS", "BILLING"
+  action    String   // e.g. "CREATE", "READ", "UPDATE", "DELETE"
+
+  role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([roleId, resource, action])
+}
+
+model BlogPost {
+  id          String   @id @default(uuid())
+  title       String
+  excerpt     String?
+  content     String
+  slug        String   @unique
+  category    String
+  authorId    String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  author      User     @relation(fields: [authorId], references: [id])
+}
+
+model PageStatus {
+  id             String   @id @default(uuid())
+  url            String   @unique
+  title          String?
+  healthScore    Int      @default(100)
+  organicTraffic Int      @default(0)
+  keywordCount   Int      @default(0)
+  issues         Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model ContentOpportunity {
+  id             String   @id @default(uuid())
+  topic          String
+  searchVolume   Int
+  difficulty     Int
+  relevanceScore Float
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model CoreWebVital {
+  id               String   @id @default(uuid())
+  url              String
+  lcp              Float    // Largest Contentful Paint
+  fid              Float    // First Input Delay
+  cls              Float    // Cumulative Layout Shift
+  performanceScore Int
+  projectId        String
+  measuredAt       DateTime @default(now())
+
+  project          Project  @relation(fields: [projectId], references: [id])
+}
+
+model Webhook {
+  id             String   @id @default(uuid())
+  name           String
+  url            String
+  events         String   // Stored as JSON or comma-separated string
+  status         String   @default("ACTIVE")
+  secret         String?
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model OnPageSeoAudit {
+  id             String   @id @default(uuid())
+  url            String
+  targetKeyword  String
+  score          Int      @default(0)
+  titleStatus    String   @default("MISSING")
+  metaStatus     String   @default("MISSING")
+  h1Status       String   @default("MISSING")
+  contentLength  Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model TechnicalIssue {
+  id             String   @id @default(uuid())
+  type           String   // e.g. "404", "500", "REDIRECT_CHAIN"
+  severity       String   // e.g. "HIGH", "MEDIUM", "LOW"
+  url            String
+  status         String   @default("OPEN")
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model EdgeRule {
+  id             String   @id @default(uuid())
+  name           String
+  pattern        String
+  action         String
+  status         String   @default("ACTIVE")
+  priority       Int      @default(0)
+  projectId      String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}
+
+model JiraIntegration {
+  id             String   @id @default(uuid())
+  domain         String
+  projectKey     String
+  issueType      String   @default("Task")
+  autoCreate     Boolean  @default(false)
+  projectId      String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project        Project  @relation(fields: [projectId], references: [id])
+}

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Header } from "../Header";
+import { Header } from "@/app/components/Header";
 import { FaqItem } from "../FaqItem";
 
 export function PricingContent() {
