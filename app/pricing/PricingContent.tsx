@@ -263,7 +263,7 @@ export function PricingContent() {
 </div>
 </div>
 <div className="pt-space-md mt-auto">
-<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center btn-effect hover:opacity-95 btn-effect hover:scale-105 transition-all duration-300 shadow-md" href="#">
+<a className="w-full py-2.5 px-space-md rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg flex items-center justify-center btn-effect hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-md" href="#">
               Start Growth
             </a>
 </div>
@@ -635,7 +635,7 @@ export function PricingContent() {
             Run your first SEO audit in under 60 seconds and turn complex website problems into an orderly, verified action plan.
           </p>
 <div className="flex flex-col sm:flex-row items-center gap-space-md w-full justify-center">
-<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg btn-effect hover:opacity-95 btn-effect hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-space-xs" href="#">
+<a className="w-full sm:w-auto px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg btn-effect hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-space-xs" href="#">
 <span>Start Free (No Credit Card Required)</span>
 <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>
