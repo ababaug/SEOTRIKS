@@ -52,7 +52,7 @@ export function Header() {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-space-md">
             <Link className="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#">Log In</Link>
-            <Link className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] btn-effect hover:opacity-95 btn-effect hover:scale-105 transition-all duration-300" href="#">Start Free</Link>
+            <Link className="inline-flex items-center justify-center px-space-lg py-space-sm font-label-lg text-label-lg rounded bg-burnt-peach text-on-primary shadow-[0_2px_8px_-2px_rgba(41,50,65,0.12)] btn-effect hover:opacity-95 hover:scale-105 transition-all duration-300" href="#">Start Free</Link>
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
               <span className="material-symbols-outlined text-on-primary text-[18px]">person</span>
             </div>
