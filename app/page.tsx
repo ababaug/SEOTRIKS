@@ -47,7 +47,7 @@ export default function Page() {
 </div>
 
 <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-<a className="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg shadow-md hover:opacity-90 transition-all transform hover:-translate-y-0.5" href="#action-plan">
+<a className="inline-flex items-center justify-center gap-space-xs px-space-xl py-3 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg shadow-md hover:opacity-90 transition-all transform hover:-translate-y-0.5" href="/register?intent=audit">
 <span>Start Free Audit</span>
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
@@ -919,7 +919,7 @@ export default function Page() {
         Run your first full domain audit in 2 minutes. Uncover what is broken, what is improving, and what to build next.
       </p>
 <div className="flex flex-col sm:flex-row items-center gap-space-md mt-space-xl">
-<a className="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg shadow-xl btn-effect hover:opacity-95 transition-all transform hover:-translate-y-0.5" data-path="signup" href="#">
+<a className="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded bg-burnt-peach text-on-primary font-label-lg text-label-lg shadow-xl btn-effect hover:opacity-95 transition-all transform hover:-translate-y-0.5" data-path="signup" href="/register">
 <span>Start Free — 14 Days</span>
 <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>
