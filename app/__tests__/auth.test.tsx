@@ -34,6 +34,17 @@ describe('Authentication Pages', () => {
       expect(screen.getByLabelText(/work email address/i)).toBeInTheDocument();
       expect(screen.getByLabelText(/^password/i)).toBeInTheDocument();
       expect(screen.getByRole('button', { name: /^log in/i })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /continue with google/i })).toBeInTheDocument();
+    });
+
+    it('toggles password visibility', () => {
+      render(<LoginPage />);
+      const passwordInput = screen.getByLabelText(/^password/i);
+      const toggleBtn = screen.getByRole('button', { name: /show password/i });
+
+      expect(passwordInput).toHaveAttribute('type', 'password');
+      fireEvent.click(toggleBtn);
+      expect(passwordInput).toHaveAttribute('type', 'text');
     });
 
     it('shows error message on invalid email submit', () => {
@@ -48,14 +59,29 @@ describe('Authentication Pages', () => {
 
       expect(screen.getByText(/invalid email or password/i)).toBeInTheDocument();
     });
+
+    it('shows error message for locked account', () => {
+      render(<LoginPage />);
+      const emailInput = screen.getByLabelText(/work email address/i);
+      const passwordInput = screen.getByLabelText(/^password/i);
+      const submitBtn = screen.getByRole('button', { name: /^log in/i });
+
+      fireEvent.change(emailInput, { target: { value: 'locked@seotriks.com' } });
+      fireEvent.change(passwordInput, { target: { value: 'password123' } });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/account temporarily locked/i)).toBeInTheDocument();
+    });
   });
 
   describe('Register Page', () => {
-    it('renders registration form inputs and plan badges', () => {
+    it('renders registration form inputs and plan/intent badges', () => {
       mockSearchParams.set('plan', 'growth');
+      mockSearchParams.set('intent', 'audit');
       render(<RegisterPage />);
       expect(screen.getByRole('heading', { name: /create your free account/i })).toBeInTheDocument();
       expect(screen.getByText(/growth plan/i)).toBeInTheDocument();
+      expect(screen.getByText(/instant full-domain audit configured/i)).toBeInTheDocument();
       expect(screen.getByLabelText(/first name/i)).toBeInTheDocument();
       expect(screen.getByLabelText(/last name/i)).toBeInTheDocument();
     });
@@ -74,6 +100,38 @@ describe('Authentication Pages', () => {
 
       expect(screen.getByText(/you must agree to the terms/i)).toBeInTheDocument();
     });
+
+    it('shows error if email already exists', () => {
+      render(<RegisterPage />);
+      fireEvent.change(screen.getByLabelText(/first name/i), { target: { value: 'Alex' } });
+      fireEvent.change(screen.getByLabelText(/last name/i), { target: { value: 'Morgan' } });
+      fireEvent.change(screen.getByLabelText(/work email/i), { target: { value: 'exists@seotriks.com' } });
+      fireEvent.change(screen.getByLabelText(/company name/i), { target: { value: 'Acme' } });
+      fireEvent.change(screen.getByLabelText(/^password/i), { target: { value: 'Pass1234!' } });
+      fireEvent.change(screen.getByLabelText(/confirm password/i), { target: { value: 'Pass1234!' } });
+      fireEvent.click(screen.getByRole('checkbox'));
+
+      const submitBtn = screen.getByRole('button', { name: /create free account/i });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/an account with this email address already exists/i)).toBeInTheDocument();
+    });
+
+    it('shows error when passwords do not match', () => {
+      render(<RegisterPage />);
+      fireEvent.change(screen.getByLabelText(/first name/i), { target: { value: 'Alex' } });
+      fireEvent.change(screen.getByLabelText(/last name/i), { target: { value: 'Morgan' } });
+      fireEvent.change(screen.getByLabelText(/work email/i), { target: { value: 'alex@company.com' } });
+      fireEvent.change(screen.getByLabelText(/company name/i), { target: { value: 'Acme' } });
+      fireEvent.change(screen.getByLabelText(/^password/i), { target: { value: 'Pass1234!' } });
+      fireEvent.change(screen.getByLabelText(/confirm password/i), { target: { value: 'Mismatch123!' } });
+      fireEvent.click(screen.getByRole('checkbox'));
+
+      const submitBtn = screen.getByRole('button', { name: /create free account/i });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument();
+    });
   });
 
   describe('Verify Email Page', () => {
@@ -83,6 +141,32 @@ describe('Authentication Pages', () => {
       expect(screen.getByText(/verify your email address/i)).toBeInTheDocument();
       expect(screen.getByText(/user@company.com/i)).toBeInTheDocument();
       expect(screen.getByRole('button', { name: /confirm & continue/i })).toBeInTheDocument();
+    });
+
+    it('displays error for invalid code', () => {
+      render(<VerifyEmailPage />);
+      const inputs = document.querySelectorAll('input[type="text"]');
+      inputs.forEach((input) => {
+        fireEvent.change(input, { target: { value: '0' } });
+      });
+
+      const submitBtn = screen.getByRole('button', { name: /confirm & continue/i });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/invalid verification code/i)).toBeInTheDocument();
+    });
+
+    it('displays expired banner for code 999999', () => {
+      render(<VerifyEmailPage />);
+      const inputs = document.querySelectorAll('input[type="text"]');
+      inputs.forEach((input) => {
+        fireEvent.change(input, { target: { value: '9' } });
+      });
+
+      const submitBtn = screen.getByRole('button', { name: /confirm & continue/i });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/verification code expired/i)).toBeInTheDocument();
     });
   });
 
@@ -115,6 +199,23 @@ describe('Authentication Pages', () => {
 
       expect(screen.getByText(/strength:/i)).toBeInTheDocument();
       expect(screen.getByText(/strong/i)).toBeInTheDocument();
+    });
+
+    it('shows success banner after successful password update', () => {
+      jest.useFakeTimers();
+      render(<ResetPasswordPage />);
+      fireEvent.change(screen.getByLabelText(/^new password/i), { target: { value: 'NewPassword123!' } });
+      fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: 'NewPassword123!' } });
+
+      const submitBtn = screen.getByRole('button', { name: /reset password/i });
+      fireEvent.click(submitBtn);
+
+      act(() => {
+        jest.advanceTimersByTime(1000);
+      });
+
+      expect(screen.getByText(/password reset complete/i)).toBeInTheDocument();
+      jest.useRealTimers();
     });
   });
 });
