@@ -29,6 +29,7 @@ function OnboardingContent() {
   const initialStep = parseInt(searchParams.get("step") || "1", 10);
 
   const [currentStep, setCurrentStep] = useState<number>(initialStep);
+  const [saveStatus, setSaveStatus] = useState<string>("Saved automatically");
 
   // Form State
   const [formData, setFormData] = useState<OnboardingState>({
@@ -51,14 +52,25 @@ function OnboardingContent() {
   const [unreachableWarning, setUnreachableWarning] = useState<boolean>(false);
   const [integrationError, setIntegrationError] = useState<string | null>(null);
   const [auditError, setAuditError] = useState<boolean>(false);
+  const [noDataState, setNoDataState] = useState<boolean>(false);
 
   // Audit Step Animation State
   const [auditProgress, setAuditProgress] = useState<number>(0);
   const [auditStageIndex, setAuditStageIndex] = useState<number>(0);
 
+  // Save progress handler
+  const handleSaveProgress = () => {
+    setSaveStatus("Saving progress...");
+    setTimeout(() => {
+      setSaveStatus("Progress saved ✓");
+      setTimeout(() => setSaveStatus("Saved automatically"), 2000);
+    }, 600);
+  };
+
   // Sync step changes to URL without full refresh
   const goToStep = (step: number) => {
     setCurrentStep(step);
+    handleSaveProgress();
     const params = new URLSearchParams();
     params.set("step", step.toString());
     if (planParam) params.set("plan", planParam);
@@ -110,17 +122,17 @@ function OnboardingContent() {
     }
   };
 
-  // Audit stages simulation
+  // Audit stages simulation matching mandatory sequence
   const auditStages = [
-    "Connecting to domain protocol...",
-    "Discovering pages & site hierarchy...",
-    "Checking technical SEO & crawling DOM...",
-    "Analyzing metadata, open graph & canonicals...",
-    "Verifying Google indexability & status codes...",
-    "Evaluating PageSpeed & Core Web Vitals...",
-    "Identifying high-impact striking distance opportunities...",
-    "Calculating SEOTRIKS composite score...",
-    "Generating personalized SEO Action Plan...",
+    "Connecting to domain & website protocol...",
+    "Discovering pages & mapping URL site hierarchy...",
+    "Checking technical SEO & DOM crawl health...",
+    "Analyzing metadata, open graph & canonical tags...",
+    "Checking indexability & HTTP response status codes...",
+    "Checking performance & Core Web Vitals telemetry...",
+    "Identifying opportunities & striking distance queries...",
+    "Building SEOTRIKS SEO Score...",
+    "Generating Personalized Action Plan...",
   ];
 
   useEffect(() => {
@@ -128,7 +140,7 @@ function OnboardingContent() {
       setAuditProgress(0);
       setAuditStageIndex(0);
 
-      const totalStages = 9;
+      const totalStages = auditStages.length;
       const interval = setInterval(() => {
         setAuditProgress((prev) => {
           if (prev >= 100) {
@@ -157,20 +169,6 @@ function OnboardingContent() {
     }
   }, [currentStep, auditError, planParam, intentParam, router]);
 
-  const stepTitles = [
-    "Welcome",
-    "Website Setup",
-    "SEO Experience",
-    "SEO Goals",
-    "Target Keywords",
-    "Competitors",
-    "Google Integrations",
-    "Running Audit",
-    "Initial Results",
-    "Action Plan",
-    "Workspace Ready",
-  ];
-
   return (
     <main className="min-h-screen bg-[#F8F9FE] flex flex-col">
       {/* Onboarding Navigation Header */}
@@ -198,10 +196,16 @@ function OnboardingContent() {
             </div>
           )}
 
-          <div className="flex items-center gap-3">
-            <span className="hidden sm:inline-block text-xs font-label-sm text-slate-500 font-medium">
-              Selected Plan: <strong className="text-[#233F63] uppercase">{planParam}</strong>
-            </span>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={handleSaveProgress}
+              className="hidden sm:flex items-center gap-1.5 text-xs font-label-sm text-slate-500 hover:text-[#233F63] transition-colors"
+            >
+              <span className="material-symbols-outlined text-[16px] text-teal-600">cloud_done</span>
+              <span>{saveStatus}</span>
+            </button>
+
             <button
               onClick={() => router.push("/dashboard")}
               className="text-xs font-label-sm font-semibold text-slate-500 hover:text-[#233F63] transition-colors"
@@ -954,23 +958,23 @@ function OnboardingContent() {
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
                 <div className="p-3 rounded-xl bg-[#F8F9FE] border border-slate-200">
                   <span className="font-headline-sm text-lg font-bold text-[#233F63] block">82</span>
-                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Technical</span>
+                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Technical Score</span>
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8F9FE] border border-slate-200">
                   <span className="font-headline-sm text-lg font-bold text-[#233F63] block">74</span>
-                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">On-Page</span>
+                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">On-Page Score</span>
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8F9FE] border border-slate-200">
                   <span className="font-headline-sm text-lg font-bold text-[#233F63] block">69</span>
-                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Content</span>
+                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Content Score</span>
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8F9FE] border border-slate-200">
                   <span className="font-headline-sm text-lg font-bold text-[#233F63] block">88</span>
-                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Performance</span>
+                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Performance Score</span>
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8F9FE] border border-slate-200 col-span-2 sm:col-span-1">
                   <span className="font-headline-sm text-lg font-bold text-[#233F63] block">95</span>
-                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Indexing</span>
+                  <span className="text-[11px] font-label-sm text-slate-500 font-semibold">Indexing Score</span>
                 </div>
               </div>
 
@@ -1034,7 +1038,7 @@ function OnboardingContent() {
                     Important product page rendered with <code className="bg-red-100 text-red-700 px-1 py-0.5 rounded text-xs font-mono">noindex</code>
                   </h3>
                   <p className="font-body-sm text-xs text-slate-600 leading-relaxed">
-                    <strong>Explanation:</strong> Robots meta tag contains noindex instructions, preventing search engine crawlers from indexing this revenue-critical page.<br/>
+                    <strong>Explanation:</strong> Meta robots tag contains noindex instructions, preventing search engine crawlers from indexing this page.<br/>
                     <strong>Potential Impact:</strong> 14,200 monthly organic visits at risk of removal from SERP.
                   </p>
                   <div className="p-3 rounded-xl bg-white border border-red-100 text-xs font-mono text-slate-700">
@@ -1075,7 +1079,7 @@ function OnboardingContent() {
                   </h3>
                   <p className="font-body-sm text-xs text-teal-900 leading-relaxed">
                     <strong>Explanation:</strong> 18 duplicate query parameters consolidated under primary canonical tag.<br/>
-                    <strong>Lift Verified:</strong> Rank improvements observed across 41 tracked target terms.
+                    <strong>Potential Impact:</strong> Lift verified across 41 tracked target terms.
                   </p>
                 </div>
               </div>
@@ -1104,25 +1108,33 @@ function OnboardingContent() {
               {/* Workspace Summary Tile */}
               <div className="p-6 rounded-2xl bg-[#F8F9FE] border border-slate-300 text-left space-y-3 font-body-sm text-xs">
                 <div className="flex items-center justify-between pb-2 border-b border-slate-200">
-                  <span className="text-slate-700 font-medium">Configured Domain:</span>
+                  <span className="text-slate-700 font-medium">Website:</span>
                   <span className="font-bold text-[#233F63]">{formData.websiteUrl || "mycompany.com"}</span>
                 </div>
                 <div className="flex items-center justify-between pb-2 border-b border-slate-200">
-                  <span className="text-slate-700 font-medium">SEOTRIKS SEO Score:</span>
+                  <span className="text-slate-700 font-medium">SEO Score:</span>
                   <span className="font-bold text-emerald-700">78 / 100</span>
                 </div>
                 <div className="flex items-center justify-between pb-2 border-b border-slate-200">
-                  <span className="text-slate-700 font-medium">Critical Issues / Quick Wins Found:</span>
-                  <span className="font-bold text-[#233F63]">3 Critical • 5 Quick Wins</span>
+                  <span className="text-slate-700 font-medium">Issues Found:</span>
+                  <span className="font-bold text-red-600">3 Critical Issues</span>
+                </div>
+                <div className="flex items-center justify-between pb-2 border-b border-slate-200">
+                  <span className="text-slate-700 font-medium">Quick Wins Found:</span>
+                  <span className="font-bold text-[#233F63]">5 Quick Wins</span>
                 </div>
                 <div className="flex items-center justify-between pb-2 border-b border-slate-200">
                   <span className="text-slate-700 font-medium">Keywords Tracked:</span>
-                  <span className="font-bold text-[#233F63]">{formData.keywords.length} terms</span>
+                  <span className="font-bold text-[#233F63]">{formData.keywords.length} keywords added</span>
+                </div>
+                <div className="flex items-center justify-between pb-2 border-b border-slate-200">
+                  <span className="text-slate-700 font-medium">Competitors Added:</span>
+                  <span className="font-bold text-[#233F63]">{formData.competitors.length} competitors</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-700 font-medium">Google Integrations:</span>
+                  <span className="text-slate-700 font-medium">Integrations Connected:</span>
                   <span className="font-bold text-teal-800">
-                    {formData.integrations.gsc ? "GSC Connected" : "Pending"}
+                    {formData.integrations.gsc ? "Google Search Console Connected" : "Pending Connection"}
                   </span>
                 </div>
               </div>
