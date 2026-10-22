@@ -240,7 +240,7 @@ function LoginContent() {
             <div className="pt-4 text-center font-body-sm text-sm text-slate-600">
               Don't have an account?{" "}
               <Link href="/register" className="font-bold text-[#233F63] hover:text-[#F26A4B] transition-colors">
-                Create Free Account
+                Create Account
               </Link>
             </div>
           </div>
