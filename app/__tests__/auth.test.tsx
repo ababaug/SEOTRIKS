@@ -48,6 +48,19 @@ describe('Authentication Pages', () => {
 
       expect(screen.getByText(/invalid email or password/i)).toBeInTheDocument();
     });
+
+    it('shows locked account error message when locked email is entered', () => {
+      render(<LoginPage />);
+      const emailInput = screen.getByLabelText(/work email address/i);
+      const passwordInput = screen.getByLabelText(/^password/i);
+      const submitBtn = screen.getByRole('button', { name: /^log in/i });
+
+      fireEvent.change(emailInput, { target: { value: 'locked@seotriks.com' } });
+      fireEvent.change(passwordInput, { target: { value: 'password123' } });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/account temporarily locked/i)).toBeInTheDocument();
+    });
   });
 
   describe('Register Page', () => {
@@ -74,6 +87,24 @@ describe('Authentication Pages', () => {
 
       expect(screen.getByText(/you must agree to the terms/i)).toBeInTheDocument();
     });
+
+    it('shows account exists error when existing email is entered', () => {
+      render(<RegisterPage />);
+      fireEvent.change(screen.getByLabelText(/first name/i), { target: { value: 'Alex' } });
+      fireEvent.change(screen.getByLabelText(/last name/i), { target: { value: 'Morgan' } });
+      fireEvent.change(screen.getByLabelText(/work email/i), { target: { value: 'exists@seotriks.com' } });
+      fireEvent.change(screen.getByLabelText(/company name/i), { target: { value: 'Acme' } });
+      fireEvent.change(screen.getByLabelText(/^password/i), { target: { value: 'Pass1234!' } });
+      fireEvent.change(screen.getByLabelText(/confirm password/i), { target: { value: 'Pass1234!' } });
+
+      const termsCheckbox = screen.getByRole('checkbox');
+      fireEvent.click(termsCheckbox);
+
+      const submitBtn = screen.getByRole('button', { name: /create free account/i });
+      fireEvent.click(submitBtn);
+
+      expect(screen.getByText(/an account with this email address already exists/i)).toBeInTheDocument();
+    });
   });
 
   describe('Verify Email Page', () => {
@@ -83,6 +114,19 @@ describe('Authentication Pages', () => {
       expect(screen.getByText(/verify your email address/i)).toBeInTheDocument();
       expect(screen.getByText(/user@company.com/i)).toBeInTheDocument();
       expect(screen.getByRole('button', { name: /confirm & continue/i })).toBeInTheDocument();
+    });
+
+    it('shows expired code banner on 999999 submission', () => {
+      render(<VerifyEmailPage />);
+      const otpInputs = screen.getAllByRole('textbox');
+      otpInputs.forEach((input) => {
+        fireEvent.change(input, { target: { value: '9' } });
+      });
+
+      const confirmBtn = screen.getByRole('button', { name: /confirm & continue/i });
+      fireEvent.click(confirmBtn);
+
+      expect(screen.getByText(/verification code expired/i)).toBeInTheDocument();
     });
   });
 
