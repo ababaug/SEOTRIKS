@@ -50,6 +50,20 @@ describe('Onboarding Flow and Workspace Dashboard', () => {
       expect(screen.getByText(/please enter your website url to continue/i)).toBeInTheDocument();
     });
 
+    it('shows unreachable domain warning when unreachable.com is submitted on Step 2', () => {
+      mockSearchParams.set('step', '2');
+      render(<OnboardingPage />);
+
+      const urlInput = screen.getByLabelText(/primary website url/i);
+      fireEvent.change(urlInput, { target: { value: 'unreachable.com' } });
+
+      const continueBtn = screen.getByRole('button', { name: /continue/i });
+      fireEvent.click(continueBtn);
+
+      expect(screen.getByText(/unable to reach domain/i)).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /retry domain connection/i })).toBeInTheDocument();
+    });
+
     it('renders Step 10 (Action Plan) with priority triage engine cards', () => {
       mockSearchParams.set('step', '10');
       render(<OnboardingPage />);
