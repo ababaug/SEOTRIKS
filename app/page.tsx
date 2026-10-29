@@ -215,7 +215,7 @@ export default function Page() {
 
 <svg className="w-20 h-8" fill="none" viewBox="0 0 80 30">
 <path d="M 0 25 Q 15 28 25 18 T 50 14 T 80 4" fill="none" stroke="#ee6c4d" strokeLinecap="round" strokeWidth="2.5"></path>
-<path d="M 0 25 Q 15 28 25 18 T 50 14 T 80 4 L 80 30 L 0 30 Z" fill="#ee6c4d" fill-opacity="0.12"></path>
+<path d="M 0 25 Q 15 28 25 18 T 50 14 T 80 4 L 80 30 L 0 30 Z" fill="#ee6c4d" fillOpacity="0.12"></path>
 </svg>
 </div>
 </div>
@@ -363,7 +363,7 @@ export default function Page() {
 
 <line stroke="#ee6c4d" strokeDasharray="2 2" strokeWidth="1.5" x1="90" x2="90" y1="10" y2="55"></line>
 <circle cx="90" cy="42" fill="#ee6c4d" r="3"></circle>
-<text fill="#ee6c4d" font-family="Manrope" font-size="9" font-weight="bold" x="95" y="20">DEPLOY</text>
+<text fill="#ee6c4d" fontFamily="Manrope" fontSize="9" fontWeight="bold" x="95" y="20">DEPLOY</text>
 
 <path d="M 90 42 C 140 38, 190 12, 280 6" stroke="#3d5a80" strokeLinecap="round" strokeWidth="3"></path>
 </svg>
