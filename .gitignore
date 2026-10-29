@@ -1,2 +1,4 @@
 node_modules/
 .next/
+dev_server.log
+verification/
